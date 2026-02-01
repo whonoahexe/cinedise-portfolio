@@ -1,4 +1,14 @@
+import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+
+export const metadata: Metadata = {
+    title: 'Contact | Cinedise Studio',
+    description: 'Get in touch with Cinedise Studio for your video, film production, and marketing needs.',
+    openGraph: {
+        title: 'Contact | Cinedise Studio',
+        description: 'Get in touch with Cinedise Studio for your video, film production, and marketing needs.',
+    },
+};
 
 export default function Contact() {
     return (
