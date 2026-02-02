@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+bower_components/
+
+# Build output
+build/
+dist/
+out/
+public/
+coverage/
+.temp/
+.tmp/
+.cache/
+
+# Framework-specific
+.next/
+.nuxt/
+.svelte-kit/
+.storybook/
+.vite/
+.turbo/
+
+# Configuration / metadata
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+npm-debug.log*
+yarn-error.log*
+*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+
+# Misc
+*.min.js
+*.min.css

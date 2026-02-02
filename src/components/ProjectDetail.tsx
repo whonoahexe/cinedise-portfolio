@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Project } from '@/data/projects';
+import type { Project } from '@/types/project';
 
 interface ProjectDetailProps {
   project: Project;
@@ -10,6 +10,7 @@ interface ProjectDetailProps {
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [copySuccess, setCopySuccess] = useState(false);
   const watchNowButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLDivElement>(null);
   const videoPopupRef = useRef<HTMLDivElement>(null);
@@ -93,6 +94,20 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
     };
   }, [isVideoOpen]);
 
+  const handleCopyLink = () => {
+    if (typeof window !== 'undefined' && navigator.clipboard) {
+      navigator.clipboard
+        .writeText(window.location.href)
+        .then(() => {
+          setCopySuccess(true);
+          setTimeout(() => setCopySuccess(false), 2000);
+        })
+        .catch((err) => {
+          console.error('Failed to copy:', err);
+        });
+    }
+  };
+
   // Determine video source
   const videoSrc = project.videoYoutubeId
     ? `https://www.youtube.com/embed/${project.videoYoutubeId}?autoplay=1`
@@ -145,12 +160,17 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         </div>
 
-        <a href="#work" className="scroll-down-circle" data-offset="30">
+        <a
+          href="#work"
+          className="scroll-down-circle"
+          data-offset="30"
+          aria-label="Scroll to project details"
+        >
           <div className="sdc-inner ph-appear">
             <div className="sdc-icon">
-              <i className="fas fa-chevron-down"></i>
+              <i className="fas fa-chevron-down" aria-hidden="true"></i>
             </div>
-            <svg viewBox="0 0 500 500">
+            <svg viewBox="0 0 500 500" aria-hidden="true">
               <defs>
                 <path
                   d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
@@ -184,9 +204,21 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               <div className="social-buttons ph-share-appear">
                 <ul>
                   <li>
-                    <a href="#" className="magnetic-item copy-link-btn" title="Copy link">
-                      <i className="fas fa-link"></i>
-                    </a>
+                    <button
+                      type="button"
+                      className="magnetic-item copy-link-btn"
+                      aria-label="Copy project link"
+                      onClick={handleCopyLink}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        cursor: 'pointer',
+                        padding: 0,
+                      }}
+                    >
+                      <i className="fas fa-link" aria-hidden="true"></i>
+                      {copySuccess && <span className="visually-hidden">Link copied!</span>}
+                    </button>
                   </li>
                 </ul>
               </div>

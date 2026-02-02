@@ -16,7 +16,7 @@ export default function Header() {
 
   const handlePortfolioClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    
+
     if (isAnimating) {
       return;
     }
@@ -46,7 +46,7 @@ export default function Header() {
       // Wait for the page to render, try multiple times if needed
       let attempts = 0;
       const maxAttempts = 5;
-      
+
       const tryScroll = () => {
         const workSection = document.getElementById('work');
         if (workSection) {
@@ -59,10 +59,10 @@ export default function Header() {
           setShouldScrollToWork(false);
         }
       };
-      
+
       // Initial delay before first attempt
       const timer = setTimeout(tryScroll, 500);
-      
+
       return () => clearTimeout(timer);
     }
   }, [shouldScrollToWork, pathname]);
@@ -250,6 +250,40 @@ export default function Header() {
     };
   }, [isMenuOpen, isAnimating]);
 
+  // Focus trap for overlay menu
+  useEffect(() => {
+    if (!isMenuOpen || !menuRef.current) return;
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      const focusableElements = menuRef.current?.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusableElements || focusableElements.length === 0) return;
+
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTab);
+    return () => {
+      document.removeEventListener('keydown', handleTab);
+    };
+  }, [isMenuOpen]);
+
   return (
     <header id="tt-header" className="tt-header-fixed">
       <div className="tt-header-inner">
@@ -271,7 +305,7 @@ export default function Header() {
         </div>
 
         <div className="tt-header-col">
-          <div id="tt-ol-menu-toggle-btn-wrap" onClick={toggleMenu}>
+          <div id="tt-ol-menu-toggle-btn-wrap">
             <div className="tt-ol-menu-toggle-btn-text">
               <span className="text-menu" data-hover="Open">
                 Menu
@@ -286,6 +320,7 @@ export default function Header() {
                 aria-expanded={isMenuOpen}
                 aria-controls="overlay-menu"
                 aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+                onClick={toggleMenu}
               >
                 <span></span>
               </button>

@@ -1,10 +1,10 @@
 /**
  * Normalized project category types
  */
-export type ProjectCategory = 
-  | 'Commercial' 
-  | 'VFX' 
-  | 'Events' 
+export type ProjectCategory =
+  | 'Commercial'
+  | 'VFX'
+  | 'Events'
   | 'Social Media'
   | 'Films'
   | 'Color'

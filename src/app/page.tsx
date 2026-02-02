@@ -50,23 +50,29 @@ export default function Home() {
             <a
               href="#work"
               className="scroll-down-btn"
+              aria-label="Scroll to work section"
               style={{
                 color: 'white',
                 fontSize: '24px',
                 textDecoration: 'none',
               }}
             >
-              <i className="fas fa-chevron-down"></i>
+              <i className="fas fa-chevron-down" aria-hidden="true"></i>
             </a>
           </div>
         </div>
 
-        <a href="#work" className="scroll-down-circle" data-offset="30">
+        <a
+          href="#work"
+          className="scroll-down-circle"
+          data-offset="30"
+          aria-label="Scroll to work section"
+        >
           <div className="sdc-inner ph-appear">
             <div className="sdc-icon">
-              <i className="fas fa-chevron-down"></i>
+              <i className="fas fa-chevron-down" aria-hidden="true"></i>
             </div>
-            <svg viewBox="0 0 500 500">
+            <svg viewBox="0 0 500 500" aria-hidden="true">
               <defs>
                 <path
                   d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
