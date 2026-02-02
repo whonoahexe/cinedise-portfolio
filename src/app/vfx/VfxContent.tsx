@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { projects } from "@/data/projects";
-import { useEffect, useRef } from "react";
+import Link from 'next/link';
+import { projects } from '@/data/projects';
+import { useEffect, useRef } from 'react';
 
 export default function VfxContent() {
-  const vfxProjects = projects.filter((p) => p.category === "VFX");
+  const vfxProjects = projects.filter((p) => p.category === 'VFX');
   const carouselRef = useRef<HTMLDivElement>(null);
   const swiperInstance = useRef<any>(null);
 
@@ -13,11 +13,7 @@ export default function VfxContent() {
     let timeoutId: NodeJS.Timeout;
 
     const initCarousel = () => {
-      if (
-        typeof window !== "undefined" &&
-        (window as any).Swiper &&
-        carouselRef.current
-      ) {
+      if (typeof window !== 'undefined' && (window as any).Swiper && carouselRef.current) {
         const $ = (window as any).$;
         const Swiper = (window as any).Swiper;
 
@@ -29,9 +25,9 @@ export default function VfxContent() {
         const $carousel = $(carouselRef.current);
 
         // Initialize Swiper
-        swiperInstance.current = new Swiper($carousel.find(".swiper")[0], {
-          direction: "horizontal",
-          slidesPerView: "auto",
+        swiperInstance.current = new Swiper($carousel.find('.swiper')[0], {
+          direction: 'horizontal',
+          slidesPerView: 'auto',
           spaceBetween: 0,
           resistanceRatio: 0.85,
           longSwipesRatio: 0.3,
@@ -61,15 +57,15 @@ export default function VfxContent() {
           },
 
           navigation: {
-            nextEl: $carousel.find(".tt-pc-arrow-next")[0],
-            prevEl: $carousel.find(".tt-pc-arrow-prev")[0],
-            disabledClass: "tt-pc-arrow-disabled",
+            nextEl: $carousel.find('.tt-pc-arrow-next')[0],
+            prevEl: $carousel.find('.tt-pc-arrow-prev')[0],
+            disabledClass: 'tt-pc-arrow-disabled',
           },
 
           pagination: {
-            el: $carousel.find(".tt-pc-pagination")[0],
-            type: "fraction",
-            modifierClass: "tt-pc-pagination-",
+            el: $carousel.find('.tt-pc-pagination')[0],
+            type: 'fraction',
+            modifierClass: 'tt-pc-pagination-',
             dynamicBullets: true,
             dynamicMainBullets: 1,
             clickable: true,
@@ -82,79 +78,77 @@ export default function VfxContent() {
 
             init: function (swiper: any) {
               const slideActive = $(swiper.slides[swiper.activeIndex]);
-              slideActive.addClass("tt-slide-active");
-              slideActive.prevAll().addClass("tt-pcs-disabled");
-              slideActive.nextAll().addClass("tt-pcs-disabled");
+              slideActive.addClass('tt-slide-active');
+              slideActive.prevAll().addClass('tt-pcs-disabled');
+              slideActive.nextAll().addClass('tt-pcs-disabled');
 
               // Play video in active slide
-              slideActive.find("video").each(function (this: HTMLVideoElement) {
+              slideActive.find('video').each(function (this: HTMLVideoElement) {
                 this.play().catch(() => {});
               });
             },
 
             transitionStart: function (swiper: any) {
               const slideActive = $(swiper.slides[swiper.activeIndex]);
-              slideActive.addClass("tt-slide-active");
-              slideActive.prev().addClass("tt-slide-active-start");
-              slideActive.next().addClass("tt-slide-active-start");
-              slideActive.prevAll().addClass("tt-pcs-disabled");
-              slideActive.removeClass("tt-pcs-disabled");
-              slideActive.nextAll().addClass("tt-pcs-disabled");
+              slideActive.addClass('tt-slide-active');
+              slideActive.prev().addClass('tt-slide-active-start');
+              slideActive.next().addClass('tt-slide-active-start');
+              slideActive.prevAll().addClass('tt-pcs-disabled');
+              slideActive.removeClass('tt-pcs-disabled');
+              slideActive.nextAll().addClass('tt-pcs-disabled');
 
               // Play video in active slide
-              $(".swiper-slide-active")
-                .find("video")
+              $('.swiper-slide-active')
+                .find('video')
                 .each(function (this: HTMLVideoElement) {
                   this.play().catch(() => {});
                 });
 
-              $(".tt-pc-arrow").addClass("tt-pc-arrow-disabled");
+              $('.tt-pc-arrow').addClass('tt-pc-arrow-disabled');
             },
 
             transitionEnd: function (swiper: any) {
               const slideActive = $(swiper.slides[swiper.activeIndex]);
-              slideActive.prevAll().removeClass("tt-slide-active");
-              slideActive.nextAll().removeClass("tt-slide-active");
-              slideActive.prev().removeClass("tt-slide-active-start");
-              slideActive.next().removeClass("tt-slide-active-start");
+              slideActive.prevAll().removeClass('tt-slide-active');
+              slideActive.nextAll().removeClass('tt-slide-active');
+              slideActive.prev().removeClass('tt-slide-active-start');
+              slideActive.next().removeClass('tt-slide-active-start');
 
               // Pause videos in non-active slides
-              $(".swiper-slide-prev")
-                .find("video")
+              $('.swiper-slide-prev')
+                .find('video')
                 .each(function (this: HTMLVideoElement) {
                   this.pause();
                 });
-              $(".swiper-slide-next")
-                .find("video")
+              $('.swiper-slide-next')
+                .find('video')
                 .each(function (this: HTMLVideoElement) {
                   this.pause();
                 });
 
-              $(".tt-pc-arrow").removeClass("tt-pc-arrow-disabled");
+              $('.tt-pc-arrow').removeClass('tt-pc-arrow-disabled');
             },
           },
         });
 
         // Scale down animation on carousel click
-        $carousel
-          .find(".swiper")
-          .on("mousedown touchstart pointerdown", function (e: any) {
-            if (e.which === 1) {
-              if (typeof window !== "undefined" && (window as any).gsap) {
-                (window as any).gsap.to($carousel.find(".swiper-slide"), {
-                  duration: 0.7,
-                  scale: 0.9,
-                });
-              }
+        $carousel.find('.swiper').on('mousedown touchstart pointerdown', function (e: any) {
+          if (e.which === 1) {
+            if (typeof window !== 'undefined' && (window as any).gsap) {
+              (window as any).gsap.to($carousel.find('.swiper-slide'), {
+                duration: 0.7,
+                scale: 0.9,
+              });
             }
-          });
+          }
+        });
 
-        $("body").on("mouseup touchend pointerup mouseleave", function () {
-          if (typeof window !== "undefined" && (window as any).gsap) {
-            (window as any).gsap.to($carousel.find(".swiper-slide"), {
+        $('body').on('mouseup touchend pointerup mouseleave', function () {
+          if (typeof window !== 'undefined' && (window as any).gsap) {
+            (window as any).gsap.to($carousel.find('.swiper-slide'), {
               duration: 0.7,
               scale: 1,
-              clearProps: "scale",
+              clearProps: 'scale',
             });
           }
         });
@@ -191,9 +185,7 @@ export default function VfxContent() {
           <div className="swiper-wrapper">
             {vfxProjects.map((project, index) => {
               // Find the first mp4 in galleryImages to use as preview video, if any
-              const previewVideo = project.galleryImages.find((img) =>
-                img.endsWith(".mp4"),
-              );
+              const previewVideo = project.galleryImages.find((img) => img.endsWith('.mp4'));
 
               return (
                 <div key={project.slug} className="swiper-slide">
@@ -229,9 +221,7 @@ export default function VfxContent() {
                         <div className="tt-pci-caption-inner">
                           <h2 className="tt-pci-title">{project.title}</h2>
                           <div className="tt-pci-categories">
-                            <div className="tt-pci-category">
-                              {project.category}
-                            </div>
+                            <div className="tt-pci-category">{project.category}</div>
                           </div>
                         </div>
                       </div>
@@ -240,9 +230,7 @@ export default function VfxContent() {
                       <div className="tt-pci-caption-inner">
                         <h2 className="tt-pci-title">{project.title}</h2>
                         <div className="tt-pci-categories">
-                          <div className="tt-pci-category">
-                            {project.category}
-                          </div>
+                          <div className="tt-pci-category">{project.category}</div>
                         </div>
                       </div>
                     </div>

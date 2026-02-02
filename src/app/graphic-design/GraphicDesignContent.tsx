@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import NextCategoryNav from "@/components/NextCategoryNav";
+import NextCategoryNav from '@/components/NextCategoryNav';
 
 export default function GraphicDesignContent() {
   return (
@@ -40,9 +40,7 @@ export default function GraphicDesignContent() {
                 ></path>
               </defs>
               <text dy="30">
-                <textPath xlinkHref="#textcircle">
-                  Scroll down - Scroll down -
-                </textPath>
+                <textPath xlinkHref="#textcircle">Scroll down - Scroll down -</textPath>
               </text>
             </svg>
           </div>

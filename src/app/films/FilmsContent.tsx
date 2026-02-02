@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import BodyClassToggler from "@/components/BodyClassToggler";
-import ShareOverlay from "@/components/ShareOverlay";
-import Link from "next/link";
-import NextCategoryNav from "@/components/NextCategoryNav";
+import BodyClassToggler from '@/components/BodyClassToggler';
+import ShareOverlay from '@/components/ShareOverlay';
+import Link from 'next/link';
+import NextCategoryNav from '@/components/NextCategoryNav';
 
 export default function FilmsContent() {
   return (
@@ -78,9 +78,7 @@ export default function FilmsContent() {
                 ></path>
               </defs>
               <text dy="30">
-                <textPath xlinkHref="#textcircle">
-                  Scroll down - Scroll down -
-                </textPath>
+                <textPath xlinkHref="#textcircle">Scroll down - Scroll down -</textPath>
               </text>
             </svg>
           </div>
@@ -105,19 +103,17 @@ export default function FilmsContent() {
               <div className="tt-col-lg-12">
                 <div className="tt-grid ttgr-layout-3 ttgr-gap-3">
                   <div className="tt-grid-items-wrap isotope-items-wrap">
-                    {["batch-1.png", "batch-2.png", "batch-3.png"].map(
-                      (img, i) => (
-                        <div key={i} className="tt-grid-item isotope-item">
-                          <div className="ttgr-item-inner">
-                            <img
-                              src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
-                              alt={`Image ${i + 1}`}
-                              className="anim-image-parallax"
-                            />
-                          </div>
+                    {['batch-1.png', 'batch-2.png', 'batch-3.png'].map((img, i) => (
+                      <div key={i} className="tt-grid-item isotope-item">
+                        <div className="ttgr-item-inner">
+                          <img
+                            src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
+                            alt={`Image ${i + 1}`}
+                            className="anim-image-parallax"
+                          />
                         </div>
-                      ),
-                    )}
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -148,12 +144,11 @@ export default function FilmsContent() {
                 </div>
                 <div className="anim-fadeinup text-gray">
                   <p>
-                    The Unequals is an action-packed short film shot on Sony
-                    FX30 with cinematic visuals and dynamic compositions. It
-                    features high-end VFX crafted by artists over 500+ hours and
-                    is graded in Rec. 709 for theatre and Netflix standards.
-                    With Dolby Atmos sound, it offers an immersive 360° audio
-                    experience for the audience.
+                    The Unequals is an action-packed short film shot on Sony FX30 with cinematic
+                    visuals and dynamic compositions. It features high-end VFX crafted by artists
+                    over 500+ hours and is graded in Rec. 709 for theatre and Netflix standards.
+                    With Dolby Atmos sound, it offers an immersive 360° audio experience for the
+                    audience.
                   </p>
                 </div>
               </div>
@@ -166,30 +161,28 @@ export default function FilmsContent() {
             <div className="tt-gallery ttga-hover">
               <div className="tt-grid ttgr-layout-3 ttgr-not-cropped ttgr-shifted ttgr-gap-4">
                 <div className="tt-grid-items-wrap isotope-items-wrap lightgallery">
-                  {["poster-1.jpg", "poster-2.jpg", "poster-3.jpg"].map(
-                    (img, i) => (
-                      <div key={i} className="tt-grid-item isotope-item">
-                        <div className="ttgr-item-inner">
-                          <a
-                            href={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
-                            className="tt-gallery-item lg-trigger"
-                            data-cursor="View"
-                          >
-                            <div className="tt-gallery-item-inner">
-                              <div className="tt-gallery-image-wrap anim-zoomin">
-                                <figure className="tt-gallery-image ttgr-height">
-                                  <img
-                                    src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
-                                    alt="Poster"
-                                  />
-                                </figure>
-                              </div>
+                  {['poster-1.jpg', 'poster-2.jpg', 'poster-3.jpg'].map((img, i) => (
+                    <div key={i} className="tt-grid-item isotope-item">
+                      <div className="ttgr-item-inner">
+                        <a
+                          href={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
+                          className="tt-gallery-item lg-trigger"
+                          data-cursor="View"
+                        >
+                          <div className="tt-gallery-item-inner">
+                            <div className="tt-gallery-image-wrap anim-zoomin">
+                              <figure className="tt-gallery-image ttgr-height">
+                                <img
+                                  src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
+                                  alt="Poster"
+                                />
+                              </figure>
                             </div>
-                          </a>
-                        </div>
+                          </div>
+                        </a>
                       </div>
-                    ),
-                  )}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

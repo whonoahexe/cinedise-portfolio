@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState, useEffect, useRef } from "react";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useState, useEffect, useRef } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,80 +22,74 @@ export default function Header() {
 
     if (willOpen) {
       // Opening menu
-      document.documentElement.classList.add("tt-no-scroll");
-      document.body.classList.add("tt-ol-menu-open", "olm-toggle-no-click");
+      document.documentElement.classList.add('tt-no-scroll');
+      document.body.classList.add('tt-ol-menu-open', 'olm-toggle-no-click');
       setIsMenuOpen(true);
 
-      if (typeof window !== "undefined" && (window as any).gsap) {
+      if (typeof window !== 'undefined' && (window as any).gsap) {
         const gsap = (window as any).gsap;
         const Power2 = (window as any).Power2;
 
         const tl = gsap.timeline({
           onComplete: () => {
-            document.body.classList.remove("olm-toggle-no-click");
+            document.body.classList.remove('olm-toggle-no-click');
             setIsAnimating(false);
           },
         });
 
-        tl.to(".tt-overlay-menu", { duration: 0.4, autoAlpha: 1 });
-        tl.from(".tt-ol-menu-list > li", {
+        tl.to('.tt-overlay-menu', { duration: 0.4, autoAlpha: 1 });
+        tl.from('.tt-ol-menu-list > li', {
           duration: 0.4,
           y: 80,
           autoAlpha: 0,
           stagger: 0.05,
-          ease: Power2?.easeOut || "power2.out",
-          clearProps: "all",
+          ease: Power2?.easeOut || 'power2.out',
+          clearProps: 'all',
         });
       } else {
         setTimeout(() => {
-          document.body.classList.remove("olm-toggle-no-click");
+          document.body.classList.remove('olm-toggle-no-click');
           setIsAnimating(false);
         }, 500);
       }
     } else {
       // Closing menu
-      document.body.classList.add("olm-toggle-no-click");
+      document.body.classList.add('olm-toggle-no-click');
 
-      if (typeof window !== "undefined" && (window as any).gsap) {
+      if (typeof window !== 'undefined' && (window as any).gsap) {
         const gsap = (window as any).gsap;
         const Power2 = (window as any).Power2;
 
         const tl = gsap.timeline({
           onComplete: () => {
-            document.documentElement.classList.remove("tt-no-scroll");
-            document.body.classList.remove(
-              "tt-ol-menu-open",
-              "olm-toggle-no-click",
-            );
+            document.documentElement.classList.remove('tt-no-scroll');
+            document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
             setIsMenuOpen(false);
             setIsAnimating(false);
           },
         });
 
-        tl.to(".tt-ol-menu-list > li", {
+        tl.to('.tt-ol-menu-list > li', {
           duration: 0.4,
           y: -80,
           autoAlpha: 0,
           stagger: 0.05,
-          ease: Power2?.easeIn || "power2.in",
+          ease: Power2?.easeIn || 'power2.in',
         });
         tl.to(
-          ".tt-overlay-menu",
+          '.tt-overlay-menu',
           {
             duration: 0.4,
             autoAlpha: 0,
-            clearProps: "all",
+            clearProps: 'all',
           },
-          "+=0.2",
+          '+=0.2'
         );
-        tl.set(".tt-ol-menu-list > li", { clearProps: "all" });
+        tl.set('.tt-ol-menu-list > li', { clearProps: 'all' });
       } else {
         setTimeout(() => {
-          document.documentElement.classList.remove("tt-no-scroll");
-          document.body.classList.remove(
-            "tt-ol-menu-open",
-            "olm-toggle-no-click",
-          );
+          document.documentElement.classList.remove('tt-no-scroll');
+          document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
           setIsMenuOpen(false);
           setIsAnimating(false);
         }, 500);
@@ -110,50 +104,44 @@ export default function Header() {
     }
 
     // Close menu with animation when clicking a link
-    document.body.classList.add("olm-toggle-no-click");
+    document.body.classList.add('olm-toggle-no-click');
 
-    if (typeof window !== "undefined" && (window as any).gsap) {
+    if (typeof window !== 'undefined' && (window as any).gsap) {
       const gsap = (window as any).gsap;
       const Power2 = (window as any).Power2;
 
-      gsap.set("#content-wrap", { autoAlpha: 0 });
+      gsap.set('#content-wrap', { autoAlpha: 0 });
       const tl = gsap.timeline({
         onComplete: () => {
-          document.documentElement.classList.remove("tt-no-scroll");
-          document.body.classList.remove(
-            "tt-ol-menu-open",
-            "olm-toggle-no-click",
-          );
+          document.documentElement.classList.remove('tt-no-scroll');
+          document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
           setIsMenuOpen(false);
           setIsAnimating(false);
         },
       });
 
-      tl.to(".tt-ol-menu-list > li", {
+      tl.to('.tt-ol-menu-list > li', {
         duration: 0.4,
         y: -80,
         autoAlpha: 0,
         stagger: 0.05,
-        ease: Power2?.easeIn || "power2.in",
+        ease: Power2?.easeIn || 'power2.in',
       });
-      tl.to("#content-wrap", {
+      tl.to('#content-wrap', {
         duration: 0.4,
         autoAlpha: 1,
-        clearProps: "all",
+        clearProps: 'all',
       });
-      tl.to(".tt-overlay-menu", {
+      tl.to('.tt-overlay-menu', {
         duration: 0.4,
         autoAlpha: 0,
-        clearProps: "all",
+        clearProps: 'all',
       });
-      tl.set(".tt-ol-menu-list > li", { clearProps: "all" });
+      tl.set('.tt-ol-menu-list > li', { clearProps: 'all' });
     } else {
       setTimeout(() => {
-        document.documentElement.classList.remove("tt-no-scroll");
-        document.body.classList.remove(
-          "tt-ol-menu-open",
-          "olm-toggle-no-click",
-        );
+        document.documentElement.classList.remove('tt-no-scroll');
+        document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
         setIsMenuOpen(false);
         setIsAnimating(false);
       }, 500);
@@ -164,19 +152,19 @@ export default function Header() {
   useEffect(() => {
     if (isMenuOpen) {
       setIsMenuOpen(false);
-      document.documentElement.classList.remove("tt-no-scroll");
-      document.body.classList.remove("tt-ol-menu-open");
+      document.documentElement.classList.remove('tt-no-scroll');
+      document.body.classList.remove('tt-ol-menu-open');
     }
   }, [pathname]);
 
   // Cleanup on unmount and initialize fixed header
   useEffect(() => {
     // Add fixed header class
-    document.body.classList.add("tt-header-fixed-on");
+    document.body.classList.add('tt-header-fixed-on');
 
     return () => {
-      document.documentElement.classList.remove("tt-no-scroll");
-      document.body.classList.remove("tt-ol-menu-open", "olm-toggle-no-click");
+      document.documentElement.classList.remove('tt-no-scroll');
+      document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
     };
   }, []);
 
@@ -211,7 +199,7 @@ export default function Header() {
             <div className="tt-ol-menu-toggle-btn-holder">
               <a
                 href="#"
-                className={`tt-ol-menu-toggle-btn magnetic-item ${isMenuOpen ? "is-open" : ""}`}
+                className={`tt-ol-menu-toggle-btn magnetic-item ${isMenuOpen ? 'is-open' : ''}`}
                 onClick={(e) => e.preventDefault()}
               >
                 <span></span>
@@ -221,9 +209,9 @@ export default function Header() {
 
           <nav
             ref={menuRef}
-            className={`tt-overlay-menu tt-ol-menu-center tt-ol-menu-count ${isMenuOpen ? "is-open" : ""}`}
+            className={`tt-overlay-menu tt-ol-menu-center tt-ol-menu-count ${isMenuOpen ? 'is-open' : ''}`}
             style={{
-              visibility: isMenuOpen ? "visible" : "hidden",
+              visibility: isMenuOpen ? 'visible' : 'hidden',
               opacity: isMenuOpen ? 1 : 0,
             }}
           >
@@ -241,7 +229,7 @@ export default function Header() {
                     <li className="tt-ol-submenu-wrap">
                       <div className="tt-ol-submenu-trigger">
                         <Link
-                          href={pathname === "/" ? "#work" : "/#work"}
+                          href={pathname === '/' ? '#work' : '/#work'}
                           onClick={handleMenuClick}
                         >
                           Portfolio

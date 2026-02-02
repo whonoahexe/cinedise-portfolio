@@ -3,12 +3,12 @@
 import { useEffect } from 'react';
 
 export default function BodyClassToggler({ className }: { className: string }) {
-    useEffect(() => {
-        document.body.classList.add(className);
-        return () => {
-            document.body.classList.remove(className);
-        };
-    }, [className]);
+  useEffect(() => {
+    document.body.classList.add(className);
+    return () => {
+      document.body.classList.remove(className);
+    };
+  }, [className]);
 
-    return null;
+  return null;
 }

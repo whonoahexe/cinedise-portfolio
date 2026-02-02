@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { projects } from "@/data/projects";
-import NextCategoryNav from "@/components/NextCategoryNav";
+import Link from 'next/link';
+import { projects } from '@/data/projects';
+import NextCategoryNav from '@/components/NextCategoryNav';
 
 export default function SocialMediaContent() {
-  const socialProjects = projects.filter((p) => p.category === "Social Media");
+  const socialProjects = projects.filter((p) => p.category === 'Social Media');
 
   return (
     <>
@@ -44,9 +44,7 @@ export default function SocialMediaContent() {
                 ></path>
               </defs>
               <text dy="30">
-                <textPath xlinkHref="#textcircle">
-                  Scroll down - Scroll down -
-                </textPath>
+                <textPath xlinkHref="#textcircle">Scroll down - Scroll down -</textPath>
               </text>
             </svg>
           </div>
@@ -62,12 +60,9 @@ export default function SocialMediaContent() {
                 <div
                   key={project.slug}
                   className="portfolio-interactive-item anim-skewinup"
-                  data-scroll-speed={index % 2 === 0 ? "3" : "2"}
+                  data-scroll-speed={index % 2 === 0 ? '3' : '2'}
                 >
-                  <Link
-                    href={`/${project.slug}`}
-                    className="pi-item-title-link"
-                  >
+                  <Link href={`/${project.slug}`} className="pi-item-title-link">
                     <h2 className="pi-item-title">{project.title}</h2>
                     <div className="pi-item-hover-title">{project.title}</div>
                   </Link>
@@ -76,19 +71,9 @@ export default function SocialMediaContent() {
                   </div>
                   <figure className="pi-item-image cover-opacity-2">
                     {/* Check if the first gallery item is a video or image, or use headerImage if available */}
-                    {project.galleryImages &&
-                    project.galleryImages[0]?.endsWith(".mp4") ? (
-                      <video
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className="ph-video"
-                      >
-                        <source
-                          src={project.galleryImages[0]}
-                          type="video/mp4"
-                        />
+                    {project.galleryImages && project.galleryImages[0]?.endsWith('.mp4') ? (
+                      <video autoPlay muted loop playsInline className="ph-video">
+                        <source src={project.galleryImages[0]} type="video/mp4" />
                       </video>
                     ) : (
                       <img

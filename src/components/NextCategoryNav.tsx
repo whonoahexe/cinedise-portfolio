@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useEffect, useRef } from "react";
+import Link from 'next/link';
+import { useEffect, useRef } from 'react';
 
 interface NextCategoryNavProps {
   href: string;
@@ -21,15 +21,11 @@ export default function NextCategoryNav({
 
     let timeoutId: NodeJS.Timeout;
     const initHover = () => {
-      if (
-        typeof window !== "undefined" &&
-        (window as any).$ &&
-        (window as any).gsap
-      ) {
+      if (typeof window !== 'undefined' && (window as any).$ && (window as any).gsap) {
         timeoutId = setTimeout(() => {
           const $ = (window as any).$;
           const gsap = (window as any).gsap;
-          const $ball = $("#ball");
+          const $ball = $('#ball');
           const $pageNav = $(navRef.current);
 
           if ($ball.length && $pageNav.length) {
@@ -38,36 +34,34 @@ export default function NextCategoryNav({
             const $ballOpacity = 0.5;
 
             // Remove old handlers
-            $pageNav.find(".tt-pn-link").off("mouseenter mouseleave");
+            $pageNav.find('.tt-pn-link').off('mouseenter mouseleave');
 
-            const $originalImage = $pageNav.find(".tt-pn-image");
+            const $originalImage = $pageNav.find('.tt-pn-image');
 
             if ($originalImage.length) {
               $pageNav
-                .find(".tt-pn-link")
-                .on("mouseenter", function () {
+                .find('.tt-pn-link')
+                .on('mouseenter', function () {
                   // Remove any old images from ball
-                  $ball.find(".tt-pn-image").remove();
+                  $ball.find('.tt-pn-image').remove();
 
-                  $("#magic-cursor").addClass("tt-pn-hover-on");
+                  $('#magic-cursor').addClass('tt-pn-hover-on');
                   const $imageClone = $originalImage.clone();
                   $imageClone.appendTo($ball);
                   gsap.to($ball, {
                     duration: 0.3,
-                    width: "20vw",
-                    height: "20vw",
+                    width: '20vw',
+                    height: '20vw',
                     opacity: 1,
                   });
 
-                  $ball.find(".tt-pn-image video").each(function (
-                    this: HTMLVideoElement,
-                  ) {
+                  $ball.find('.tt-pn-image video').each(function (this: HTMLVideoElement) {
                     this.play();
                   });
                 })
-                .on("mouseleave", function () {
-                  $("#magic-cursor").removeClass("tt-pn-hover-on");
-                  $ball.find(".tt-pn-image").remove();
+                .on('mouseleave', function () {
+                  $('#magic-cursor').removeClass('tt-pn-hover-on');
+                  $ball.find('.tt-pn-image').remove();
                   gsap.to($ball, {
                     duration: 0.3,
                     width: $ballWidth,
@@ -76,7 +70,7 @@ export default function NextCategoryNav({
                   });
                 });
 
-              $pageNav.find(".tt-pn-link").addClass("not-hide-cursor");
+              $pageNav.find('.tt-pn-link').addClass('not-hide-cursor');
             }
           }
         }, 300);
@@ -90,13 +84,9 @@ export default function NextCategoryNav({
     return () => {
       if (timeoutId) clearTimeout(timeoutId);
       // Clean up handlers
-      if (
-        typeof window !== "undefined" &&
-        (window as any).$ &&
-        navRef.current
-      ) {
+      if (typeof window !== 'undefined' && (window as any).$ && navRef.current) {
         const $ = (window as any).$;
-        $(navRef.current).find(".tt-pn-link").off("mouseenter mouseleave");
+        $(navRef.current).find('.tt-pn-link').off('mouseenter mouseleave');
       }
     };
   }, []);

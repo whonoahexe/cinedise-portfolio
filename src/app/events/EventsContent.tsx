@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { projects } from "@/data/projects";
-import NextCategoryNav from "@/components/NextCategoryNav";
+import Link from 'next/link';
+import { projects } from '@/data/projects';
+import NextCategoryNav from '@/components/NextCategoryNav';
 
 export default function EventsContent() {
-  const eventProjects = projects.filter((p) => p.category === "Events");
+  const eventProjects = projects.filter((p) => p.category === 'Events');
 
   return (
     <>
@@ -44,9 +44,7 @@ export default function EventsContent() {
                 ></path>
               </defs>
               <text dy="30">
-                <textPath xlinkHref="#textcircle">
-                  Scroll down - Scroll down -
-                </textPath>
+                <textPath xlinkHref="#textcircle">Scroll down - Scroll down -</textPath>
               </text>
             </svg>
           </div>
@@ -63,7 +61,7 @@ export default function EventsContent() {
                   {eventProjects.map((project, index) => (
                     <div
                       key={project.slug}
-                      className={`tt-grid-item isotope-item ${index % 2 === 0 ? "people" : "creative"}`}
+                      className={`tt-grid-item isotope-item ${index % 2 === 0 ? 'people' : 'creative'}`}
                     >
                       <div className="ttgr-item-inner">
                         <div className="portfolio-grid-item">
@@ -75,10 +73,7 @@ export default function EventsContent() {
                             <div className="pgi-image-holder cover-opacity-2">
                               <div className="pgi-image-inner anim-zoomin">
                                 <figure className="pgi-image ttgr-height">
-                                  <img
-                                    src={project.headerImage}
-                                    alt={project.title}
-                                  />
+                                  <img src={project.headerImage} alt={project.title} />
                                 </figure>
                               </div>
                             </div>
@@ -88,9 +83,7 @@ export default function EventsContent() {
                             <div className="pgi-caption-inner">
                               <h2 className="pgi-title">{project.title}</h2>
                               <div className="pgi-categories-wrap">
-                                <div className="pgi-category">
-                                  {project.category}
-                                </div>
+                                <div className="pgi-category">{project.category}</div>
                               </div>
                             </div>
                           </div>

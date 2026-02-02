@@ -1,13 +1,11 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { projects } from "@/data/projects";
-import NextCategoryNav from "@/components/NextCategoryNav";
+import Link from 'next/link';
+import { projects } from '@/data/projects';
+import NextCategoryNav from '@/components/NextCategoryNav';
 
 export default function CommercialsContent() {
-  const commercialProjects = projects.filter(
-    (p) => p.category === "Commercial",
-  );
+  const commercialProjects = projects.filter((p) => p.category === 'Commercial');
 
   return (
     <>
@@ -46,9 +44,7 @@ export default function CommercialsContent() {
                 ></path>
               </defs>
               <text dy="30">
-                <textPath xlinkHref="#textcircle">
-                  Scroll down - Scroll down -
-                </textPath>
+                <textPath xlinkHref="#textcircle">Scroll down - Scroll down -</textPath>
               </text>
             </svg>
           </div>
@@ -83,9 +79,7 @@ export default function CommercialsContent() {
                           <div className="pli-info">
                             <h2 className="pli-title">{project.title}</h2>
                             <div className="pli-categories-wrap">
-                              <div className="pli-category">
-                                {project.category}
-                              </div>
+                              <div className="pli-category">{project.category}</div>
                             </div>
                           </div>
                         </div>
