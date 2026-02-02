@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Project } from '@/data/projects';
 
@@ -10,10 +10,17 @@ interface ProjectDetailProps {
 
 export default function ProjectDetail({ project }: ProjectDetailProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const watchNowButtonRef = useRef<HTMLButtonElement>(null);
+  const closeButtonRef = useRef<HTMLDivElement>(null);
+  const videoPopupRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (isVideoOpen) {
       document.body.classList.add('video-open');
+      // Focus close button when modal opens
+      setTimeout(() => {
+        closeButtonRef.current?.focus();
+      }, 100);
     } else {
       document.body.classList.remove('video-open');
     }
@@ -29,7 +36,62 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
 
   const handleVideoClose = () => {
     setIsVideoOpen(false);
+    // Restore focus to Watch Now button
+    setTimeout(() => {
+      watchNowButtonRef.current?.focus();
+    }, 100);
   };
+
+  // Handle Escape key to close video modal
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isVideoOpen) {
+        handleVideoClose();
+      }
+    };
+
+    if (isVideoOpen) {
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isVideoOpen]);
+
+  // Focus trap for video modal
+  useEffect(() => {
+    if (!isVideoOpen || !videoPopupRef.current) return;
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      const focusableElements = videoPopupRef.current?.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusableElements || focusableElements.length === 0) return;
+
+      const firstElement = focusableElements[0] as HTMLElement;
+      const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        }
+      } else {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    };
+
+    document.addEventListener('keydown', handleTab);
+    return () => {
+      document.removeEventListener('keydown', handleTab);
+    };
+  }, [isVideoOpen]);
 
   // Determine video source
   const videoSrc = project.videoYoutubeId
@@ -66,15 +128,17 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               </li>
               <li>
                 <div className="tt-btn tt-btn-primary">
-                  <a
-                    href="#"
+                  <button
+                    ref={watchNowButtonRef}
+                    type="button"
                     className="video-trigger"
                     data-hover="Watch Now"
                     data-cursor="Watch Now"
+                    aria-label="Open video player"
                     onClick={handleVideoOpen}
                   >
                     Watch Now
-                  </a>
+                  </button>
                 </div>
               </li>
             </ul>
@@ -138,12 +202,32 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         {/* Using a simplified version of the popup logic for React */}
         {isVideoOpen && (
           <div
+            ref={videoPopupRef}
             className="video-popup-overlay"
             style={{ display: 'block' }}
             onClick={handleVideoClose}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="video-modal-title"
           >
             <div className="video-popup-content" onClick={(e) => e.stopPropagation()}>
-              <div className="video-popup-close" onClick={handleVideoClose}>
+              <h2 id="video-modal-title" className="visually-hidden">
+                {project.title} Video
+              </h2>
+              <div
+                ref={closeButtonRef}
+                className="video-popup-close"
+                onClick={handleVideoClose}
+                role="button"
+                tabIndex={0}
+                aria-label="Close video player"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleVideoClose();
+                  }
+                }}
+              >
                 <i className="fas fa-times"></i>
               </div>
               <div className="video-wrapper">
@@ -236,6 +320,18 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             width: 100%;
             height: 100%;
             object-fit: cover;
+          }
+          /* Screen reader only content */
+          .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
           }
         `}</style>
 

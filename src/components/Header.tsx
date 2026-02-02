@@ -8,6 +8,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+  const toggleButtonRef = useRef<HTMLButtonElement>(null);
+  const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
   const pathname = usePathname();
 
   const toggleMenu = (e?: React.MouseEvent) => {
@@ -34,6 +36,8 @@ export default function Header() {
           onComplete: () => {
             document.body.classList.remove('olm-toggle-no-click');
             setIsAnimating(false);
+            // Focus first menu link after opening
+            firstMenuLinkRef.current?.focus();
           },
         });
 
@@ -50,6 +54,8 @@ export default function Header() {
         setTimeout(() => {
           document.body.classList.remove('olm-toggle-no-click');
           setIsAnimating(false);
+          // Focus first menu link after opening
+          firstMenuLinkRef.current?.focus();
         }, 500);
       }
     } else {
@@ -66,6 +72,8 @@ export default function Header() {
             document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
             setIsMenuOpen(false);
             setIsAnimating(false);
+            // Restore focus to toggle button after closing
+            toggleButtonRef.current?.focus();
           },
         });
 
@@ -92,6 +100,8 @@ export default function Header() {
           document.body.classList.remove('tt-ol-menu-open', 'olm-toggle-no-click');
           setIsMenuOpen(false);
           setIsAnimating(false);
+          // Restore focus to toggle button after closing
+          toggleButtonRef.current?.focus();
         }, 500);
       }
     }
@@ -168,6 +178,23 @@ export default function Header() {
     };
   }, []);
 
+  // Handle Escape key to close menu
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen && !isAnimating) {
+        toggleMenu();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('keydown', handleEscape);
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isMenuOpen, isAnimating]);
+
   return (
     <header id="tt-header" className="tt-header-fixed">
       <div className="tt-header-inner">
@@ -197,17 +224,21 @@ export default function Header() {
               <span className="text-close">Close</span>
             </div>
             <div className="tt-ol-menu-toggle-btn-holder">
-              <a
-                href="#"
+              <button
+                ref={toggleButtonRef}
+                type="button"
                 className={`tt-ol-menu-toggle-btn magnetic-item ${isMenuOpen ? 'is-open' : ''}`}
-                onClick={(e) => e.preventDefault()}
+                aria-expanded={isMenuOpen}
+                aria-controls="overlay-menu"
+                aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               >
                 <span></span>
-              </a>
+              </button>
             </div>
           </div>
 
           <nav
+            id="overlay-menu"
             ref={menuRef}
             className={`tt-overlay-menu tt-ol-menu-center tt-ol-menu-count ${isMenuOpen ? 'is-open' : ''}`}
             style={{
@@ -221,7 +252,7 @@ export default function Header() {
                   <ul className="tt-ol-menu-list">
                     <li className="tt-ol-submenu-wrap">
                       <div className="tt-ol-submenu-trigger">
-                        <Link href="/" onClick={handleMenuClick}>
+                        <Link href="/" onClick={handleMenuClick} ref={firstMenuLinkRef}>
                           Home
                         </Link>
                       </div>

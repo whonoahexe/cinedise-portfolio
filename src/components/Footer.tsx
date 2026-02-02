@@ -1,15 +1,26 @@
+'use client';
+
 import Link from 'next/link';
 
 export default function Footer() {
+  const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <footer id="tt-footer" className="!bg-[#0a0a0a]">
       <div className="tt-footer-inner">
         <div className="footer-col tt-align-center-left">
           <div className="footer-col-inner">
             <div className="tt-btn tt-btn-link">
-              <a href="#" className="scroll-to-top" data-hover="Back to top">
+              <button
+                type="button"
+                className="scroll-to-top"
+                data-hover="Back to top"
+                aria-label="Scroll back to top"
+                onClick={handleScrollToTop}
+              >
                 Back to top
-              </a>
+              </button>
             </div>
           </div>
         </div>
