@@ -1,20 +1,4 @@
-export interface Project {
-  slug: string;
-  title: string;
-  category: string;
-  year: string;
-  headerImage: string;
-  description: string;
-  videoYoutubeId?: string; // Standard YouTube ID
-  videoEmbedUrl?: string; // Generic embed URL or direct video source
-  videoSrc?: string; // Direct video source if applicable (can be same as embedUrl)
-  galleryImages: string[];
-  nextProject: {
-    slug: string;
-    title: string;
-    thumbnail: string;
-  };
-}
+import type { Project } from '@/types/project';
 
 export const projects: Project[] = [
   {
@@ -481,3 +465,41 @@ export const projects: Project[] = [
     },
   },
 ];
+
+/**
+ * Helper functions to decouple routing and UI logic from direct array access
+ */
+
+/**
+ * Get a project by its slug
+ * @param slug - The project slug to search for
+ * @returns The project if found, undefined otherwise
+ */
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((p) => p.slug === slug);
+}
+
+/**
+ * Get all project slugs for static generation
+ * @returns Array of all project slugs
+ */
+export function getAllProjectSlugs(): string[] {
+  return projects.map((p) => p.slug);
+}
+
+/**
+ * Get all projects in a specific category
+ * @param category - The category to filter by
+ * @returns Array of projects in the specified category
+ */
+export function getProjectsByCategory(category: Project['category']): Project[] {
+  return projects.filter((p) => p.category === category);
+}
+
+/**
+ * Get all unique categories from projects
+ * @returns Array of unique category names
+ */
+export function getAllCategories(): Project['category'][] {
+  return Array.from(new Set(projects.map((p) => p.category)));
+}

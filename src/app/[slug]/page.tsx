@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { projects } from '@/data/projects';
+import { getAllProjectSlugs, getProjectBySlug } from '@/data/projects';
 import ProjectDetail from '@/components/ProjectDetail';
 
 export function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.slug,
-  }));
+  return getAllProjectSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -15,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata | undefined> {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = getProjectBySlug(slug);
   if (!project) return undefined;
 
   const description =
@@ -36,7 +34,7 @@ export async function generateMetadata({
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
