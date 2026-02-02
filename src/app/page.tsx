@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="work">
+      <div id="work" className="work-section">
         {/* Works Section */}
         <div
           id="work"

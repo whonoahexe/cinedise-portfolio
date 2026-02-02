@@ -1,16 +1,71 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [shouldScrollToWork, setShouldScrollToWork] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const toggleButtonRef = useRef<HTMLButtonElement>(null);
   const firstMenuLinkRef = useRef<HTMLAnchorElement>(null);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handlePortfolioClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    if (isAnimating) {
+      return;
+    }
+
+    // Close the menu first
+    handleMenuClick(e);
+
+    // Handle navigation/scroll
+    if (pathname === '/') {
+      // Already on home page, just scroll after menu closes
+      setTimeout(() => {
+        const workSection = document.getElementById('work');
+        if (workSection) {
+          workSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 500);
+    } else {
+      // Navigate to home page and set flag to scroll
+      setShouldScrollToWork(true);
+      router.push('/');
+    }
+  };
+
+  // Effect to scroll to #work after navigation completes
+  useEffect(() => {
+    if (shouldScrollToWork && pathname === '/') {
+      // Wait for the page to render, try multiple times if needed
+      let attempts = 0;
+      const maxAttempts = 5;
+      
+      const tryScroll = () => {
+        const workSection = document.getElementById('work');
+        if (workSection) {
+          workSection.scrollIntoView({ behavior: 'smooth' });
+          setShouldScrollToWork(false);
+        } else if (attempts < maxAttempts) {
+          attempts++;
+          setTimeout(tryScroll, 200);
+        } else {
+          setShouldScrollToWork(false);
+        }
+      };
+      
+      // Initial delay before first attempt
+      const timer = setTimeout(tryScroll, 500);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [shouldScrollToWork, pathname]);
 
   const toggleMenu = (e?: React.MouseEvent) => {
     if (e) {
@@ -259,12 +314,9 @@ export default function Header() {
                     </li>
                     <li className="tt-ol-submenu-wrap">
                       <div className="tt-ol-submenu-trigger">
-                        <Link
-                          href={pathname === '/' ? '#work' : '/#work'}
-                          onClick={handleMenuClick}
-                        >
+                        <a href="#" onClick={handlePortfolioClick}>
                           Portfolio
-                        </Link>
+                        </a>
                       </div>
                     </li>
                     <li className="tt-ol-submenu-wrap">
