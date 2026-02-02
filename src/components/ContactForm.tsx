@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
 
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,38 +16,40 @@ export default function ContactForm() {
         }
     }, [submitStatus]);
 
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setIsSubmitting(true);
         setSubmitStatus(null);
 
         const form = e.currentTarget;
-        const now = new Date();
-        const time = now.toLocaleString();
+        
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: (form.elements.namedItem('Name') as HTMLInputElement).value,
+                    email: (form.elements.namedItem('Email') as HTMLInputElement).value,
+                    subject: (form.elements.namedItem('Subject') as HTMLInputElement).value,
+                    option: (form.elements.namedItem('option') as HTMLSelectElement).value,
+                    message: (form.elements.namedItem('Message') as HTMLTextAreaElement).value,
+                }),
+            });
 
-        // Mapping based on contact-form.js
-        const templateParams = {
-            to_email: "cinedisestudio@gmail.com",
-            subject: (form.elements.namedItem('Subject') as HTMLInputElement).value,
-            option: (form.elements.namedItem('option') as HTMLSelectElement).value,
-            name: (form.elements.namedItem('Name') as HTMLInputElement).value,
-            time: time,
-            message: (form.elements.namedItem('Message') as HTMLTextAreaElement).value,
-            from_email: (form.elements.namedItem('Email') as HTMLInputElement).value,
-            reply_to: (form.elements.namedItem('Email') as HTMLInputElement).value
-        };
-
-        emailjs.send('service_bui5z4s', 'template_1zfk70o', templateParams, 'OlOVU80KMUttQfRAk')
-            .then((result) => {
-                console.log(result.text);
+            if (response.ok) {
                 setSubmitStatus('success');
                 setIsSubmitting(false);
                 form.reset();
-            }, (error) => {
-                console.log(error.text);
-                setSubmitStatus('error');
-                setIsSubmitting(false);
-            });
+            } else {
+                throw new Error('Failed to send message');
+            }
+        } catch (error) {
+            console.error(error);
+            setSubmitStatus('error');
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -175,9 +176,6 @@ export default function ContactForm() {
                 )}
                 {submitStatus === 'error' && (
                     <div className="flex items-start gap-3 p-4">
-                        <svg className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
                         <div>
                             <p className="text-red-400 font-medium">Failed to send message</p>
                             <p className="text-red-400/70 text-sm mt-0.5">Something went wrong. Please try again or contact us directly via email.</p>
