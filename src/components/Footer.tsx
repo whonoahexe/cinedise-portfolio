@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { siteConfig } from '@/config/site';
 
 export default function Footer() {
   const handleScrollToTop = () => {
@@ -30,12 +31,12 @@ export default function Footer() {
             <div className="tt-copyright">
               © Copyright -{' '}
               <a
-                href="https://cinedise.studio"
+                href={siteConfig.company.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="tt-link"
               >
-                cinedise.studio
+                {siteConfig.company.url.replace('https://', '')}
               </a>
             </div>
           </div>
@@ -52,22 +53,22 @@ export default function Footer() {
                 <ul>
                   <li>
                     <a
-                      href="https://www.instagram.com/cinedisestudio"
+                      href={siteConfig.social.instagram.url}
                       className="magnetic-item"
                       target="_blank"
                       rel="noopener"
                     >
-                      Ig.
+                      {siteConfig.social.instagram.label}
                     </a>
                   </li>
                   <li>
                     <a
-                      href="https://youtube.com/@cinedise?si=gV6O790ZKDjIDTj5"
+                      href={siteConfig.social.youtube.url}
                       className="magnetic-item"
                       target="_blank"
                       rel="noopener"
                     >
-                      Yt.
+                      {siteConfig.social.youtube.label}
                     </a>
                   </li>
                 </ul>

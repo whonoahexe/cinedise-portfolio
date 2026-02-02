@@ -6,7 +6,7 @@ export async function POST(request: Request) {
     const { name, email, subject, option, message } = body;
 
     const templateParams = {
-      to_email: 'cinedisestudio@gmail.com',
+      to_email: process.env.EMAILJS_TO_EMAIL,
       subject: subject,
       option: option,
       name: name,
@@ -22,9 +22,9 @@ export async function POST(request: Request) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        service_id: 'service_bui5z4s',
-        template_id: 'template_1zfk70o',
-        user_id: 'OlOVU80KMUttQfRAk',
+        service_id: process.env.EMAILJS_SERVICE_ID,
+        template_id: process.env.EMAILJS_TEMPLATE_ID,
+        user_id: process.env.EMAILJS_PUBLIC_KEY,
         accessToken: process.env.EMAILJS_PRIVATE_KEY,
         template_params: templateParams,
       }),

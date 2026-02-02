@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
   title: 'Contact | Cinedise Studio',
@@ -29,28 +30,22 @@ export default function Contact() {
               </div>
 
               <ul className="tt-contact-info padding-bottom-40 text-gray">
-                <li className="anim-fadeinup">
-                  <span className="tt-ci-icon">
-                    <i className="fas fa-phone"></i>
-                  </span>
-                  <a href="tel:+918108859741" className="tt-link">
-                    +91 81088 59741
-                  </a>
-                </li>
-                <li className="anim-fadeinup">
-                  <span className="tt-ci-icon">
-                    <i className="fas fa-phone"></i>
-                  </span>
-                  <a href="tel:+919382788853" className="tt-link">
-                    +91 93827 88853
-                  </a>
-                </li>
+                {siteConfig.contact.phones.map((phone, index) => (
+                  <li key={index} className="anim-fadeinup">
+                    <span className="tt-ci-icon">
+                      <i className="fas fa-phone"></i>
+                    </span>
+                    <a href={`tel:${phone.number}`} className="tt-link">
+                      {phone.display}
+                    </a>
+                  </li>
+                ))}
                 <li className="anim-fadeinup">
                   <span className="tt-ci-icon">
                     <i className="fas fa-envelope"></i>
                   </span>
-                  <a href="mailto:business@cinedise.studio" className="tt-link">
-                    business@cinedise.studio
+                  <a href={`mailto:${siteConfig.contact.email}`} className="tt-link">
+                    {siteConfig.contact.email}
                   </a>
                 </li>
                 <li className="anim-fadeinup">
@@ -59,22 +54,22 @@ export default function Contact() {
                     <ul>
                       <li>
                         <a
-                          href="https://www.instagram.com/cinedisestudio"
+                          href={siteConfig.social.instagram.url}
                           className="magnetic-item"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Ig.
+                          {siteConfig.social.instagram.label}
                         </a>
                       </li>
                       <li>
                         <a
-                          href="https://youtube.com/@cinedise?si=gV6O790ZKDjIDTj5"
+                          href={siteConfig.social.youtube.url}
                           className="magnetic-item"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          Yt.
+                          {siteConfig.social.youtube.label}
                         </a>
                       </li>
                     </ul>
