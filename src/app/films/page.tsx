@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FilmsContent from './FilmsContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'Films | Cinedise Studio',
@@ -8,9 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Films | Cinedise Studio',
     description: 'Film production by Cinedise Studio - The Unequals, an action-packed short film.',
-    images: [
-      { url: 'https://cdn.cinedise.studio/public/films/parallax.png' },
-    ],
+    images: [{ url: `${CDN_BASE}/films/parallax.png` }],
   },
 };
 

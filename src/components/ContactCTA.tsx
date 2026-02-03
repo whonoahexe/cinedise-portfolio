@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { brandingAssets } from '@/config/content';
 
 export default function ContactCTA() {
   return (
@@ -15,10 +16,7 @@ export default function ContactCTA() {
           </div>
 
           <div className="tt-pn-image">
-            <img
-              src="https://cdn.cinedise.studio/public/cursor.jpg"
-              alt="image"
-            />
+            <img src={brandingAssets.cursorImage} alt="image" />
           </div>
         </div>
       </div>

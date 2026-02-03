@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { brandingAssets, CDN_BASE } from '@/config/content';
 
 export default function AboutUsContent() {
   const contentCarouselRef = useRef<HTMLDivElement>(null);
@@ -196,7 +197,7 @@ export default function AboutUsContent() {
                       <figure className="cover-opacity-1">
                         <img
                           className="tt-cc-image anim-image-parallax"
-                          src={`https://cdn.cinedise.studio/public/about/${num}.jpg`}
+                          src={`${CDN_BASE}/about/${num}.jpg`}
                           alt={`About Image ${num}`}
                         />
                       </figure>
@@ -374,10 +375,7 @@ export default function AboutUsContent() {
               Let&apos;s make something great together!
             </div>
             <div className="tt-pn-image">
-              <img
-                src="https://cdn.cinedise.studio/public/cursor.jpg"
-                alt="image"
-              />
+              <img src={brandingAssets.cursorImage} alt="image" />
             </div>
           </div>
         </div>

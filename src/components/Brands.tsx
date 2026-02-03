@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { brands } from '@/config/content';
 
 export default function Brands() {
   return (
@@ -10,136 +11,18 @@ export default function Brands() {
         </div>
 
         <ul className="tt-logo-wall cl-col-44 anim-fadeinup">
-          <li>
-            <a
-              href="https://www.bosch.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/bosch.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.fifa.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/fifa.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.zee.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/zee.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.hdfcbank.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/hdfc.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.idfcfirstbank.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/idfc.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.imagicaaworld.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/imagica.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://powerecover.eu/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/pr.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.vegaluxsystem.com/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/vega.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://drope.tech/?srsltid=AfmBOooZtTaAFdphIgI0MT7ya27nPgTiFmNiCZeLp98uejIwLpPT-3D6"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/drope.png"
-                alt="Client"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.amity.edu/"
-              className="cursor-alter"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://cdn.cinedise.studio/public/brands/amity.png"
-                alt="Client"
-              />
-            </a>
-          </li>
+          {brands.map((brand) => (
+            <li key={brand.name}>
+              <a
+                href={brand.websiteUrl}
+                className="cursor-alter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={brand.logoUrl} alt={brand.name} />
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

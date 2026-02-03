@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CommercialsContent from './CommercialsContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'Commercials | Cinedise Studio',
@@ -9,9 +10,7 @@ export const metadata: Metadata = {
     title: 'Commercials | Cinedise Studio',
     description:
       'Commercial video production by Cinedise Studio - High-impact commercials that elevate your brand.',
-    images: [
-      { url: 'https://cdn.cinedise.studio/public/commercials/header.jpg' },
-    ],
+    images: [{ url: `${CDN_BASE}/commercials/header.jpg` }],
   },
 };
 

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
+import { CDN_BASE } from '@/config/content';
 
 export default function ColorContent() {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -183,10 +184,7 @@ export default function ColorContent() {
             <div className="swiper-slide" data-title="The Unequals | Color" data-category="Grading">
               <div className="tt-portfolio-slider-item cover-opacity-3" data-swiper-parallax="50%">
                 <video className="tt-bg-video" loop muted playsInline preload="metadata">
-                  <source
-                    src="https://cdn.cinedise.studio/public/color/the-unequals.mp4"
-                    type="video/mp4"
-                  />
+                  <source src={`${CDN_BASE}/color/the-unequals.mp4`} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -195,10 +193,7 @@ export default function ColorContent() {
             <div className="swiper-slide" data-title="Atomic Brew | Color" data-category="Grading">
               <div className="tt-portfolio-slider-item cover-opacity-3" data-swiper-parallax="50%">
                 <video className="tt-bg-video" loop muted playsInline preload="metadata">
-                  <source
-                    src="https://cdn.cinedise.studio/public/color/atomic-brew.mp4"
-                    type="video/mp4"
-                  />
+                  <source src={`${CDN_BASE}/color/atomic-brew.mp4`} type="video/mp4" />
                 </video>
               </div>
             </div>
@@ -207,10 +202,7 @@ export default function ColorContent() {
             <div className="swiper-slide" data-title="Aminova 25 | Color" data-category="Grading">
               <div className="tt-portfolio-slider-item cover-opacity-3" data-swiper-parallax="50%">
                 <video className="tt-bg-video" loop muted playsInline preload="metadata">
-                  <source
-                    src="https://cdn.cinedise.studio/public/color/aminova-25.mp4"
-                    type="video/mp4"
-                  />
+                  <source src={`${CDN_BASE}/color/aminova-25.mp4`} type="video/mp4" />
                 </video>
               </div>
             </div>

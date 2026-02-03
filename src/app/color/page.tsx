@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ColorContent from './ColorContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'Color Grading | Cinedise Studio',
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
       'Professional color grading services by Cinedise Studio - Transform your footage with cinematic color.',
     images: [
       {
-        url: 'https://cdn.cinedise.studio/public/commercials/atomic-brew/thumbnail.jpg',
+        url: `${CDN_BASE}/commercials/atomic-brew/thumbnail.jpg`,
       },
     ],
   },

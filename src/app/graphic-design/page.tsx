@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import GraphicDesignContent from './GraphicDesignContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'Graphic Design | Cinedise Studio',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Graphic design portfolio by Cinedise Studio.',
     images: [
       {
-        url: 'https://cdn.cinedise.studio/public/category-thumbnails/category-8.jpg',
+        url: `${CDN_BASE}/category-thumbnails/category-8.jpg`,
       },
     ],
   },

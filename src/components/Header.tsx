@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { brandingAssets } from '@/config/content';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 
@@ -291,12 +292,12 @@ export default function Header() {
           <div className="tt-logo">
             <Link href="/">
               <img
-                src="https://cdn.cinedise.studio/public/logo-cinedise-light.png"
+                src={brandingAssets.logoLight}
                 className="tt-logo-light magnetic-item"
                 alt="Logo"
               />
               <img
-                src="https://cdn.cinedise.studio/public/logo-cinedise-dark.png"
+                src={brandingAssets.logoDark}
                 className="tt-logo-dark magnetic-item"
                 alt="Logo"
               />

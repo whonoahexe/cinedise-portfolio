@@ -4,6 +4,7 @@ import BodyClassToggler from '@/components/BodyClassToggler';
 import ShareOverlay from '@/components/ShareOverlay';
 import Link from 'next/link';
 import NextCategoryNav from '@/components/NextCategoryNav';
+import { CDN_BASE } from '@/config/content';
 
 export default function FilmsContent() {
   return (
@@ -17,10 +18,7 @@ export default function FilmsContent() {
           <div className="ph-image">
             <div className="ph-image-inner">
               <video autoPlay muted loop playsInline className="ph-video">
-                <source
-                  src="https://cdn.cinedise.studio/public/films/background-video_1.mp4"
-                  type="video/mp4"
-                />
+                <source src={`${CDN_BASE}/films/background-video_1.mp4`} type="video/mp4" />
               </video>
             </div>
           </div>
@@ -107,7 +105,7 @@ export default function FilmsContent() {
                       <div key={i} className="tt-grid-item isotope-item">
                         <div className="ttgr-item-inner">
                           <img
-                            src={`https://cdn.cinedise.studio/public/films/${img}`}
+                            src={`${CDN_BASE}/films/${img}`}
                             alt={`Image ${i + 1}`}
                             className="anim-image-parallax"
                           />
@@ -127,7 +125,7 @@ export default function FilmsContent() {
               <figure>
                 <img
                   className="anim-image-parallax tt-lazy"
-                  src="https://cdn.cinedise.studio/public/films/parallax.png"
+                  src={`${CDN_BASE}/films/parallax.png`}
                   alt="Parallax Image"
                 />
               </figure>
@@ -165,17 +163,14 @@ export default function FilmsContent() {
                     <div key={i} className="tt-grid-item isotope-item">
                       <div className="ttgr-item-inner">
                         <a
-                          href={`https://cdn.cinedise.studio/public/films/${img}`}
+                          href={`${CDN_BASE}/films/${img}`}
                           className="tt-gallery-item lg-trigger"
                           data-cursor="View"
                         >
                           <div className="tt-gallery-item-inner">
                             <div className="tt-gallery-image-wrap anim-zoomin">
                               <figure className="tt-gallery-image ttgr-height">
-                                <img
-                                  src={`https://cdn.cinedise.studio/public/films/${img}`}
-                                  alt="Poster"
-                                />
+                                <img src={`${CDN_BASE}/films/${img}`} alt="Poster" />
                               </figure>
                             </div>
                           </div>
@@ -192,7 +187,7 @@ export default function FilmsContent() {
         <NextCategoryNav
           href="/commercials"
           categoryName="Commercials"
-          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-2.jpg"
+          thumbnailUrl={`${CDN_BASE}/category-thumbnails/category-2.jpg`}
         />
       </div>
     </>

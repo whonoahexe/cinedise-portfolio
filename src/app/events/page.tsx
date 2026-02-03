@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import EventsContent from './EventsContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'Events | Cinedise Studio',
@@ -8,9 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Events | Cinedise Studio',
     description: 'Event coverage and videography by Cinedise Studio.',
-    images: [
-      { url: 'https://cdn.cinedise.studio/public/events/header.jpg' },
-    ],
+    images: [{ url: `${CDN_BASE}/events/header.jpg` }],
   },
 };
 

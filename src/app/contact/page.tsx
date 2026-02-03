@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ContactForm from '@/components/ContactForm';
+import { brandingAssets } from '@/config/content';
 import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
@@ -95,10 +96,7 @@ export default function Contact() {
             </a>
             <div className="tt-pn-subtitle anim-fadeinup">Selected Works</div>
             <div className="tt-pn-image">
-              <img
-                src="https://cdn.cinedise.studio/public/cursor.jpg"
-                alt="image"
-              />
+              <img src={brandingAssets.cursorImage} alt="image" />
             </div>
           </div>
         </div>

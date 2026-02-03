@@ -1,4 +1,5 @@
 import type { ProjectCategory, IsotopeCategory } from '@/types/project';
+import { CDN_BASE } from '@/config/content';
 
 /**
  * Category grid item for the homepage portfolio grid
@@ -22,56 +23,49 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     category: 'pages',
     projectCategory: 'Films',
     link: '/films',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-1.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-1.jpg`,
   },
   {
     title: 'Commercial',
     category: 'portfolio',
     projectCategory: 'Commercial',
     link: '/commercials',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-2.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-2.jpg`,
   },
   {
     title: 'Social Media Content',
     category: 'elements',
     projectCategory: 'Social Media',
     link: '/social-media',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-3.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-3.jpg`,
   },
   {
     title: 'Events',
     category: 'portfolio',
     projectCategory: 'Events',
     link: '/events',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-4.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-4.jpg`,
   },
   {
     title: 'Visual Effects',
     category: 'portfolio',
     projectCategory: 'VFX',
     link: '/vfx',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-5.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-5.jpg`,
   },
   {
     title: 'Color',
     category: 'portfolio',
     projectCategory: 'Color',
     link: '/color',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-6.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-6.jpg`,
   },
   {
     title: 'Motion Design',
     category: 'portfolio',
     projectCategory: 'Motion Design',
     link: 'https://brkn.me/motion',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-7.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-7.jpg`,
     external: true,
   },
   {
@@ -79,16 +73,14 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     category: 'portfolio',
     projectCategory: 'Graphic Design',
     link: '/graphic-design',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-8.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-8.jpg`,
   },
   {
     title: 'UI/UX',
     category: 'portfolio',
     projectCategory: 'UI/UX',
     link: 'https://brkn.me/web',
-    image:
-      'https://cdn.cinedise.studio/public/category-thumbnails/category-9.jpg',
+    image: `${CDN_BASE}/category-thumbnails/category-9.jpg`,
     external: true,
   },
 ];

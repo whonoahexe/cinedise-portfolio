@@ -1,6 +1,7 @@
 'use client';
 
 import NextCategoryNav from '@/components/NextCategoryNav';
+import { CDN_BASE } from '@/config/content';
 
 export default function GraphicDesignContent() {
   return (
@@ -13,10 +14,7 @@ export default function GraphicDesignContent() {
         <div className="page-header-inner tt-wrap">
           <div className="ph-image">
             <div className="ph-image-inner">
-              <img
-                src="https://cdn.cinedise.studio/public/category-thumbnails/category-8.jpg"
-                alt="Image"
-              />
+              <img src={`${CDN_BASE}/category-thumbnails/category-8.jpg`} alt="Image" />
             </div>
           </div>
 
@@ -59,7 +57,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/bpf.png"
+                          href={`${CDN_BASE}/graphic/bpf.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -67,10 +65,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/bpf.png"
-                                  alt="BPF"
-                                />
+                                <img src={`${CDN_BASE}/graphic/bpf.png`} alt="BPF" />
                               </figure>
                             </div>
                           </div>
@@ -84,7 +79,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/broken-brand.png"
+                          href={`${CDN_BASE}/graphic/broken-brand.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -93,7 +88,7 @@ export default function GraphicDesignContent() {
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
                                 <img
-                                  src="https://cdn.cinedise.studio/public/graphic/broken-brand.png"
+                                  src={`${CDN_BASE}/graphic/broken-brand.png`}
                                   alt="Broken Brand"
                                 />
                               </figure>
@@ -109,7 +104,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/caminus.png"
+                          href={`${CDN_BASE}/graphic/caminus.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -117,10 +112,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/caminus.png"
-                                  alt="Caminus"
-                                />
+                                <img src={`${CDN_BASE}/graphic/caminus.png`} alt="Caminus" />
                               </figure>
                             </div>
                           </div>
@@ -134,7 +126,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/cinedise-live-2.png"
+                          href={`${CDN_BASE}/graphic/cinedise-live-2.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -143,7 +135,7 @@ export default function GraphicDesignContent() {
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
                                 <img
-                                  src="https://cdn.cinedise.studio/public/graphic/cinedise-live-2.png"
+                                  src={`${CDN_BASE}/graphic/cinedise-live-2.png`}
                                   alt="Cinedise Live 2"
                                 />
                               </figure>
@@ -159,7 +151,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/cinedise-live.png"
+                          href={`${CDN_BASE}/graphic/cinedise-live.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -168,7 +160,7 @@ export default function GraphicDesignContent() {
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
                                 <img
-                                  src="https://cdn.cinedise.studio/public/graphic/cinedise-live.png"
+                                  src={`${CDN_BASE}/graphic/cinedise-live.png`}
                                   alt="Cinedise Live"
                                 />
                               </figure>
@@ -184,7 +176,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/infatuated.png"
+                          href={`${CDN_BASE}/graphic/infatuated.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -192,10 +184,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/infatuated.png"
-                                  alt="Infatuated"
-                                />
+                                <img src={`${CDN_BASE}/graphic/infatuated.png`} alt="Infatuated" />
                               </figure>
                             </div>
                           </div>
@@ -209,7 +198,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/interlude.jpg"
+                          href={`${CDN_BASE}/graphic/interlude.jpg`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -217,10 +206,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/interlude.jpg"
-                                  alt="Interlude"
-                                />
+                                <img src={`${CDN_BASE}/graphic/interlude.jpg`} alt="Interlude" />
                               </figure>
                             </div>
                           </div>
@@ -234,7 +220,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/paper-cuts.png"
+                          href={`${CDN_BASE}/graphic/paper-cuts.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -242,10 +228,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/paper-cuts.png"
-                                  alt="Paper Cuts"
-                                />
+                                <img src={`${CDN_BASE}/graphic/paper-cuts.png`} alt="Paper Cuts" />
                               </figure>
                             </div>
                           </div>
@@ -259,7 +242,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/saras-mercer.jpg"
+                          href={`${CDN_BASE}/graphic/saras-mercer.jpg`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -268,7 +251,7 @@ export default function GraphicDesignContent() {
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
                                 <img
-                                  src="https://cdn.cinedise.studio/public/graphic/saras-mercer.jpg"
+                                  src={`${CDN_BASE}/graphic/saras-mercer.jpg`}
                                   alt="Saras Mercer"
                                 />
                               </figure>
@@ -284,7 +267,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/send-noods.png"
+                          href={`${CDN_BASE}/graphic/send-noods.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -292,10 +275,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/send-noods.png"
-                                  alt="Send Noods"
-                                />
+                                <img src={`${CDN_BASE}/graphic/send-noods.png`} alt="Send Noods" />
                               </figure>
                             </div>
                           </div>
@@ -309,7 +289,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/synx.png"
+                          href={`${CDN_BASE}/graphic/synx.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -317,10 +297,7 @@ export default function GraphicDesignContent() {
                           <div className="pgi-image-holder cover-opacity-2">
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
-                                <img
-                                  src="https://cdn.cinedise.studio/public/graphic/synx.png"
-                                  alt="Synx"
-                                />
+                                <img src={`${CDN_BASE}/graphic/synx.png`} alt="Synx" />
                               </figure>
                             </div>
                           </div>
@@ -334,7 +311,7 @@ export default function GraphicDesignContent() {
                     <div className="ttgr-item-inner">
                       <div className="portfolio-grid-item">
                         <a
-                          href="https://cdn.cinedise.studio/public/graphic/unequals-red.png"
+                          href={`${CDN_BASE}/graphic/unequals-red.png`}
                           target="_blank"
                           className="pgi-image-wrap"
                           data-cursor="View<br>Project"
@@ -343,7 +320,7 @@ export default function GraphicDesignContent() {
                             <div className="pgi-image-inner anim-zoomin">
                               <figure className="pgi-image ttgr-height">
                                 <img
-                                  src="https://cdn.cinedise.studio/public/graphic/unequals-red.png"
+                                  src={`${CDN_BASE}/graphic/unequals-red.png`}
                                   alt="Unequals Red"
                                 />
                               </figure>
@@ -362,7 +339,7 @@ export default function GraphicDesignContent() {
         <NextCategoryNav
           href="https://brkn.me/web"
           categoryName="UI/UX"
-          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-9.jpg"
+          thumbnailUrl={`${CDN_BASE}/category-thumbnails/category-9.jpg`}
         />
       </div>
     </>

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { projects } from '@/data/projects';
 import NextCategoryNav from '@/components/NextCategoryNav';
+import { CDN_BASE } from '@/config/content';
 
 export default function SocialMediaContent() {
   const socialProjects = projects.filter((p) => p.category === 'Social Media');
@@ -17,10 +18,7 @@ export default function SocialMediaContent() {
         <div className="page-header-inner tt-wrap">
           <div className="ph-image">
             <div className="ph-image-inner">
-              <img
-                src="https://cdn.cinedise.studio/public/social-media/header.jpg"
-                alt="Image"
-              />
+              <img src={`${CDN_BASE}/social-media/header.jpg`} alt="Image" />
             </div>
           </div>
 
@@ -91,7 +89,7 @@ export default function SocialMediaContent() {
         <NextCategoryNav
           href="/events"
           categoryName="Events"
-          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-4.jpg"
+          thumbnailUrl={`${CDN_BASE}/category-thumbnails/category-4.jpg`}
         />
       </div>
     </>

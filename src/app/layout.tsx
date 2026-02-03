@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import { brandingAssets } from '@/config/content';
 import Script from 'next/script';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -40,7 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="ptr-preloader">
               <div className="ptr-prel-content">
                 <img
-                  src="https://cdn.cinedise.studio/public/logo-cinedise-light.png"
+                  src={brandingAssets.preloaderLogo}
                   className="ptr-prel-image tt-logo-light"
                   alt="Logo"
                 />

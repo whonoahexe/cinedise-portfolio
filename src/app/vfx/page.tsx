@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import VfxContent from './VfxContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'VFX | Cinedise Studio',
@@ -10,7 +11,7 @@ export const metadata: Metadata = {
     description: 'Visual Effects expertise by Cinedise Studio - From compositing to 3D animation.',
     images: [
       {
-        url: 'https://cdn.cinedise.studio/public/vfx/atomic-brew/thumbnail.png',
+        url: `${CDN_BASE}/vfx/atomic-brew/thumbnail.png`,
       },
     ],
   },

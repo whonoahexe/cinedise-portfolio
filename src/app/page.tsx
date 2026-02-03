@@ -2,6 +2,7 @@ import ProjectGrid from '@/components/ProjectGrid';
 import TeamGrid from '@/components/TeamGrid';
 import Brands from '@/components/Brands';
 import ContactCTA from '@/components/ContactCTA';
+import { CDN_BASE } from '@/config/content';
 
 export default function Home() {
   return (
@@ -16,10 +17,7 @@ export default function Home() {
           <div className="ph-image">
             <div className="ph-image-inner">
               <video autoPlay muted loop playsInline className="ph-video" preload="metadata">
-                <source
-                  src="https://cdn.cinedise.studio/public/web.mp4"
-                  type="video/mp4"
-                />
+                <source src={`${CDN_BASE}/web.mp4`} type="video/mp4" />
               </video>
             </div>
           </div>

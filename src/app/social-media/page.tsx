@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import SocialMediaContent from './SocialMediaContent';
+import { CDN_BASE } from '@/config/content';
 
 export const metadata: Metadata = {
   title: 'Social Media | Cinedise Studio',
@@ -8,9 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Social Media | Cinedise Studio',
     description: 'Social media content creation by Cinedise Studio.',
-    images: [
-      { url: 'https://cdn.cinedise.studio/public/social-media/header.jpg' },
-    ],
+    images: [{ url: `${CDN_BASE}/social-media/header.jpg` }],
   },
 };
 
