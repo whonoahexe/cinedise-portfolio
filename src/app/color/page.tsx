@@ -11,7 +11,7 @@ export const metadata: Metadata = {
       'Professional color grading services by Cinedise Studio - Transform your footage with cinematic color.',
     images: [
       {
-        url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/commercials/atomic-brew/thumbnail.jpg',
+        url: 'https://cdn.cinedise.studio/public/commercials/atomic-brew/thumbnail.jpg',
       },
     ],
   },

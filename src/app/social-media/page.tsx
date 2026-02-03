@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Social Media | Cinedise Studio',
     description: 'Social media content creation by Cinedise Studio.',
     images: [
-      { url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/social-media/header.jpg' },
+      { url: 'https://cdn.cinedise.studio/public/social-media/header.jpg' },
     ],
   },
 };

@@ -18,7 +18,7 @@ export default function SocialMediaContent() {
           <div className="ph-image">
             <div className="ph-image-inner">
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/social-media/header.jpg"
+                src="https://cdn.cinedise.studio/public/social-media/header.jpg"
                 alt="Image"
               />
             </div>
@@ -91,7 +91,7 @@ export default function SocialMediaContent() {
         <NextCategoryNav
           href="/events"
           categoryName="Events"
-          thumbnailUrl="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-4.jpg"
+          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-4.jpg"
         />
       </div>
     </>

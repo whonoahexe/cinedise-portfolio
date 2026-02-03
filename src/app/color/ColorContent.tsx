@@ -184,7 +184,7 @@ export default function ColorContent() {
               <div className="tt-portfolio-slider-item cover-opacity-3" data-swiper-parallax="50%">
                 <video className="tt-bg-video" loop muted playsInline preload="metadata">
                   <source
-                    src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/color/the-unequals.mp4"
+                    src="https://cdn.cinedise.studio/public/color/the-unequals.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -196,7 +196,7 @@ export default function ColorContent() {
               <div className="tt-portfolio-slider-item cover-opacity-3" data-swiper-parallax="50%">
                 <video className="tt-bg-video" loop muted playsInline preload="metadata">
                   <source
-                    src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/color/atomic-brew.mp4"
+                    src="https://cdn.cinedise.studio/public/color/atomic-brew.mp4"
                     type="video/mp4"
                   />
                 </video>
@@ -208,7 +208,7 @@ export default function ColorContent() {
               <div className="tt-portfolio-slider-item cover-opacity-3" data-swiper-parallax="50%">
                 <video className="tt-bg-video" loop muted playsInline preload="metadata">
                   <source
-                    src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/color/aminova-25.mp4"
+                    src="https://cdn.cinedise.studio/public/color/aminova-25.mp4"
                     type="video/mp4"
                   />
                 </video>

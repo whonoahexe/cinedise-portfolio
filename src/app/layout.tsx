@@ -40,7 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="ptr-preloader">
               <div className="ptr-prel-content">
                 <img
-                  src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/logo-cinedise-light.png"
+                  src="https://cdn.cinedise.studio/public/logo-cinedise-light.png"
                   className="ptr-prel-image tt-logo-light"
                   alt="Logo"
                 />

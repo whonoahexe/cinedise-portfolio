@@ -17,7 +17,7 @@ export default function Home() {
             <div className="ph-image-inner">
               <video autoPlay muted loop playsInline className="ph-video" preload="metadata">
                 <source
-                  src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/web.mp4"
+                  src="https://cdn.cinedise.studio/public/web.mp4"
                   type="video/mp4"
                 />
               </video>

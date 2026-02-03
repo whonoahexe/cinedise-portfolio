@@ -196,7 +196,7 @@ export default function AboutUsContent() {
                       <figure className="cover-opacity-1">
                         <img
                           className="tt-cc-image anim-image-parallax"
-                          src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/about/${num}.jpg`}
+                          src={`https://cdn.cinedise.studio/public/about/${num}.jpg`}
                           alt={`About Image ${num}`}
                         />
                       </figure>
@@ -375,7 +375,7 @@ export default function AboutUsContent() {
             </div>
             <div className="tt-pn-image">
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/cursor.jpg"
+                src="https://cdn.cinedise.studio/public/cursor.jpg"
                 alt="image"
               />
             </div>

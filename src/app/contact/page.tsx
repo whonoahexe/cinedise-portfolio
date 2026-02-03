@@ -96,7 +96,7 @@ export default function Contact() {
             <div className="tt-pn-subtitle anim-fadeinup">Selected Works</div>
             <div className="tt-pn-image">
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/cursor.jpg"
+                src="https://cdn.cinedise.studio/public/cursor.jpg"
                 alt="image"
               />
             </div>

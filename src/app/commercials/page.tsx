@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
       'Commercial video production by Cinedise Studio - High-impact commercials that elevate your brand.',
     images: [
-      { url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/commercials/header.jpg' },
+      { url: 'https://cdn.cinedise.studio/public/commercials/header.jpg' },
     ],
   },
 };

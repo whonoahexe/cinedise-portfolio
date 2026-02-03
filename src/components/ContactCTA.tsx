@@ -16,7 +16,7 @@ export default function ContactCTA() {
 
           <div className="tt-pn-image">
             <img
-              src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/cursor.jpg"
+              src="https://cdn.cinedise.studio/public/cursor.jpg"
               alt="image"
             />
           </div>

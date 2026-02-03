@@ -18,7 +18,7 @@ export default function FilmsContent() {
             <div className="ph-image-inner">
               <video autoPlay muted loop playsInline className="ph-video">
                 <source
-                  src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/background-video_1.mp4"
+                  src="https://cdn.cinedise.studio/public/films/background-video_1.mp4"
                   type="video/mp4"
                 />
               </video>
@@ -107,7 +107,7 @@ export default function FilmsContent() {
                       <div key={i} className="tt-grid-item isotope-item">
                         <div className="ttgr-item-inner">
                           <img
-                            src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
+                            src={`https://cdn.cinedise.studio/public/films/${img}`}
                             alt={`Image ${i + 1}`}
                             className="anim-image-parallax"
                           />
@@ -127,7 +127,7 @@ export default function FilmsContent() {
               <figure>
                 <img
                   className="anim-image-parallax tt-lazy"
-                  src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/parallax.png"
+                  src="https://cdn.cinedise.studio/public/films/parallax.png"
                   alt="Parallax Image"
                 />
               </figure>
@@ -165,7 +165,7 @@ export default function FilmsContent() {
                     <div key={i} className="tt-grid-item isotope-item">
                       <div className="ttgr-item-inner">
                         <a
-                          href={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
+                          href={`https://cdn.cinedise.studio/public/films/${img}`}
                           className="tt-gallery-item lg-trigger"
                           data-cursor="View"
                         >
@@ -173,7 +173,7 @@ export default function FilmsContent() {
                             <div className="tt-gallery-image-wrap anim-zoomin">
                               <figure className="tt-gallery-image ttgr-height">
                                 <img
-                                  src={`https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/${img}`}
+                                  src={`https://cdn.cinedise.studio/public/films/${img}`}
                                   alt="Poster"
                                 />
                               </figure>
@@ -192,7 +192,7 @@ export default function FilmsContent() {
         <NextCategoryNav
           href="/commercials"
           categoryName="Commercials"
-          thumbnailUrl="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-2.jpg"
+          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-2.jpg"
         />
       </div>
     </>

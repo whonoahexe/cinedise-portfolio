@@ -23,7 +23,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Films',
     link: '/films',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-1.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-1.jpg',
   },
   {
     title: 'Commercial',
@@ -31,7 +31,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Commercial',
     link: '/commercials',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-2.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-2.jpg',
   },
   {
     title: 'Social Media Content',
@@ -39,7 +39,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Social Media',
     link: '/social-media',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-3.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-3.jpg',
   },
   {
     title: 'Events',
@@ -47,7 +47,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Events',
     link: '/events',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-4.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-4.jpg',
   },
   {
     title: 'Visual Effects',
@@ -55,7 +55,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'VFX',
     link: '/vfx',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-5.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-5.jpg',
   },
   {
     title: 'Color',
@@ -63,7 +63,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Color',
     link: '/color',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-6.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-6.jpg',
   },
   {
     title: 'Motion Design',
@@ -71,7 +71,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Motion Design',
     link: 'https://brkn.me/motion',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-7.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-7.jpg',
     external: true,
   },
   {
@@ -80,7 +80,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'Graphic Design',
     link: '/graphic-design',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-8.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-8.jpg',
   },
   {
     title: 'UI/UX',
@@ -88,7 +88,7 @@ export const CATEGORY_GRID_ITEMS: CategoryGridItem[] = [
     projectCategory: 'UI/UX',
     link: 'https://brkn.me/web',
     image:
-      'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-9.jpg',
+      'https://cdn.cinedise.studio/public/category-thumbnails/category-9.jpg',
     external: true,
   },
 ];

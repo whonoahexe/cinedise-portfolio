@@ -291,12 +291,12 @@ export default function Header() {
           <div className="tt-logo">
             <Link href="/">
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/logo-cinedise-light.png"
+                src="https://cdn.cinedise.studio/public/logo-cinedise-light.png"
                 className="tt-logo-light magnetic-item"
                 alt="Logo"
               />
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/logo-cinedise-dark.png"
+                src="https://cdn.cinedise.studio/public/logo-cinedise-dark.png"
                 className="tt-logo-dark magnetic-item"
                 alt="Logo"
               />

@@ -18,7 +18,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/bosch.png"
+                src="https://cdn.cinedise.studio/public/brands/bosch.png"
                 alt="Client"
               />
             </a>
@@ -31,7 +31,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/fifa.png"
+                src="https://cdn.cinedise.studio/public/brands/fifa.png"
                 alt="Client"
               />
             </a>
@@ -44,7 +44,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/zee.png"
+                src="https://cdn.cinedise.studio/public/brands/zee.png"
                 alt="Client"
               />
             </a>
@@ -57,7 +57,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/hdfc.png"
+                src="https://cdn.cinedise.studio/public/brands/hdfc.png"
                 alt="Client"
               />
             </a>
@@ -70,7 +70,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/idfc.png"
+                src="https://cdn.cinedise.studio/public/brands/idfc.png"
                 alt="Client"
               />
             </a>
@@ -83,7 +83,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/imagica.png"
+                src="https://cdn.cinedise.studio/public/brands/imagica.png"
                 alt="Client"
               />
             </a>
@@ -96,7 +96,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/pr.png"
+                src="https://cdn.cinedise.studio/public/brands/pr.png"
                 alt="Client"
               />
             </a>
@@ -109,7 +109,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/vega.png"
+                src="https://cdn.cinedise.studio/public/brands/vega.png"
                 alt="Client"
               />
             </a>
@@ -122,7 +122,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/drope.png"
+                src="https://cdn.cinedise.studio/public/brands/drope.png"
                 alt="Client"
               />
             </a>
@@ -135,7 +135,7 @@ export default function Brands() {
               rel="noopener noreferrer"
             >
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/brands/amity.png"
+                src="https://cdn.cinedise.studio/public/brands/amity.png"
                 alt="Client"
               />
             </a>

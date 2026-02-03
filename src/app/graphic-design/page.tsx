@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Graphic design portfolio by Cinedise Studio.',
     images: [
       {
-        url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-8.jpg',
+        url: 'https://cdn.cinedise.studio/public/category-thumbnails/category-8.jpg',
       },
     ],
   },

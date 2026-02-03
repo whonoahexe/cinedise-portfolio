@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Events | Cinedise Studio',
     description: 'Event coverage and videography by Cinedise Studio.',
     images: [
-      { url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/events/header.jpg' },
+      { url: 'https://cdn.cinedise.studio/public/events/header.jpg' },
     ],
   },
 };

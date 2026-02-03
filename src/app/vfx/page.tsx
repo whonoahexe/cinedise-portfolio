@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: 'Visual Effects expertise by Cinedise Studio - From compositing to 3D animation.',
     images: [
       {
-        url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/vfx/atomic-brew/thumbnail.png',
+        url: 'https://cdn.cinedise.studio/public/vfx/atomic-brew/thumbnail.png',
       },
     ],
   },

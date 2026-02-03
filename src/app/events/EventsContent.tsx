@@ -18,7 +18,7 @@ export default function EventsContent() {
           <div className="ph-image">
             <div className="ph-image-inner">
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/events/header.jpg"
+                src="https://cdn.cinedise.studio/public/events/header.jpg"
                 alt="Image"
               />
             </div>
@@ -100,7 +100,7 @@ export default function EventsContent() {
         <NextCategoryNav
           href="/vfx"
           categoryName="VFX"
-          thumbnailUrl="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-5.jpg"
+          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-5.jpg"
         />
       </div>
     </>

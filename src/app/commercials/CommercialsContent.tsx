@@ -18,7 +18,7 @@ export default function CommercialsContent() {
           <div className="ph-image">
             <div className="ph-image-inner">
               <img
-                src="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/commercials/header.jpg"
+                src="https://cdn.cinedise.studio/public/commercials/header.jpg"
                 alt="Image"
               />
             </div>
@@ -106,7 +106,7 @@ export default function CommercialsContent() {
         <NextCategoryNav
           href="/social-media"
           categoryName="Social Media"
-          thumbnailUrl="https://cinedise-video.s3.eu-north-1.amazonaws.com/public/category-thumbnails/category-3.jpg"
+          thumbnailUrl="https://cdn.cinedise.studio/public/category-thumbnails/category-3.jpg"
         />
       </div>
     </>

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Films | Cinedise Studio',
     description: 'Film production by Cinedise Studio - The Unequals, an action-packed short film.',
     images: [
-      { url: 'https://cinedise-video.s3.eu-north-1.amazonaws.com/public/films/parallax.png' },
+      { url: 'https://cdn.cinedise.studio/public/films/parallax.png' },
     ],
   },
 };
