@@ -1,0 +1,39 @@
+{
+  "title": "The Unequals | Breakdown",
+  "category": "VFX",
+  "year": "2025",
+  "description": "This breakdown video provides a detailed showcase of the various VFX elements executed in the film, highlighting each individual component of the visual effects work. From seamless compositing to intricate enhancements, every layer of VFX is carefully deconstructed, demonstrating the technical and creative processes behind the final result. The video offers a comprehensive insight into the integration of digital elements, ensuring a professional and polished visual experience that elevates the storytelling.",
+  "videoYoutubeId": "75kvVCRi5PI",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "the-unequals-vfx-0.mp4"
+    },
+    {
+      "discriminant": "upload",
+      "value": "the-unequals-vfx-1.mp4"
+    },
+    {
+      "discriminant": "upload",
+      "value": "the-unequals-vfx-2.mp4"
+    },
+    {
+      "discriminant": "upload",
+      "value": "the-unequals-vfx-3.png"
+    },
+    {
+      "discriminant": "upload",
+      "value": "the-unequals-vfx-4.png"
+    },
+    {
+      "discriminant": "upload",
+      "value": "the-unequals-vfx-5.png"
+    }
+  ],
+  "nextProject": "flash-vfx",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "the-unequals-vfx.png"
+  }
+}

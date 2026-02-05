@@ -1,0 +1,31 @@
+{
+  "title": "Sky Pyramid | Breakdown",
+  "category": "VFX",
+  "year": "2024",
+  "description": "Sky Pyramid is a fusion of fantasy, sci-fi, and futuristic genres. Fueling my passion for pushing creative boundaries, I crafted this environment to unveil a surreal world. It's akin to one's imagination—a dream, a place existing in another realm. I brought it to life using software like Blender and After Effects for compositing.",
+  "videoYoutubeId": "g4qkHfhZyR8",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "sky-pyramid-vfx-0.mp4"
+    },
+    {
+      "discriminant": "upload",
+      "value": "sky-pyramid-vfx-1.mp4"
+    },
+    {
+      "discriminant": "upload",
+      "value": "sky-pyramid-vfx-2.png"
+    },
+    {
+      "discriminant": "upload",
+      "value": "sky-pyramid-vfx-3.mp4"
+    }
+  ],
+  "nextProject": "auto-expo",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "sky-pyramid-vfx.png"
+  }
+}

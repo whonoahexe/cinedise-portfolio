@@ -31,7 +31,7 @@ export interface Project {
   videoEmbedUrl?: string; // Generic embed URL or direct video source
   videoSrc?: string; // Direct video source if applicable (can be same as embedUrl)
   galleryImages: string[];
-  nextProject: {
+  nextProject?: {
     slug: string;
     title: string;
     thumbnail: string;

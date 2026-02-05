@@ -1,0 +1,27 @@
+{
+  "title": "Power Recover | Breakdown",
+  "category": "VFX",
+  "year": "2024",
+  "description": "A cutting-edge 3D animation was created for a commercial showcasing a cryotherapy machine and its advanced features. The animation included a fully detailed 3D model of the machine, expertly animated to highlight its functionality and design. Precise color grading was applied to ensure a visually striking look, complemented by sophisticated visual effects (VFX) to elevate the overall production quality. The final result is a polished, professional commercial that seamlessly combines technology, aesthetics, and a dynamic visual experience.",
+  "videoYoutubeId": "pZNbLiPCI2s",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "power-recover-vfx-0.png"
+    },
+    {
+      "discriminant": "upload",
+      "value": "power-recover-vfx-1.png"
+    },
+    {
+      "discriminant": "upload",
+      "value": "power-recover-vfx-2.png"
+    }
+  ],
+  "nextProject": "layers",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "power-recover-vfx.png"
+  }
+}

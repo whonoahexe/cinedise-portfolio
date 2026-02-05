@@ -1,0 +1,55 @@
+{
+  "title": "Auto Expo",
+  "category": "Events",
+  "year": "2024",
+  "description": "Where horsepower met heart and design met desire – the Auto Expo at Aminova 2024 was a paradise for speed lovers and machine dreamers. From roaring engines and sleek designs to futuristic concepts and vintage charm, every curve and contour on display turned heads and sparked imaginations. This wasn't just an exhibition – it was a celebration of engineering, innovation, and adrenaline. Relive the drive. Relive the thrill.",
+  "videoYoutubeId": "lbjanWassIQ",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-3.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-4.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-5.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-6.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-7.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-8.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-event-9.jpg"
+    }
+  ],
+  "nextProject": "btfw-25-event",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "auto-expo-event.jpg"
+  }
+}

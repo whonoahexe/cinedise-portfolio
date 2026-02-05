@@ -1,0 +1,31 @@
+{
+  "title": "Atomic Brew",
+  "category": "Commercial",
+  "year": "2025",
+  "description": "Atomic Brew is a commercial made for a coffee maker. It shows the power and impact that is similar to the movie - Oppenheimer.",
+  "videoYoutubeId": "Z2FzkLpgNtA",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "atomic-brew-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "atomic-brew-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "atomic-brew-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "atomic-brew-3.jpg"
+    }
+  ],
+  "nextProject": "atomic-brew-vfx",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "atomic-brew.jpg"
+  }
+}

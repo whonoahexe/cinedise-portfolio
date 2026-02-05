@@ -1,0 +1,14 @@
+{
+  "title": "Wedding Reel",
+  "category": "Social Media",
+  "year": "2024",
+  "description": "A beautiful wedding reel focusing on capturing the special moments and emotions of the day.",
+  "videoYoutubeId": "",
+  "videoEmbedUrl": "https://cdn.cinedise.studio/public/social-media/wedding-reel/1.mp4",
+  "gallery": [],
+  "nextProject": "monsoon-in-mumbai",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "wedding-reel.jpg"
+  }
+}

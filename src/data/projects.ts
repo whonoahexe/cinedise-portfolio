@@ -1,447 +1,75 @@
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from '../../keystatic.config';
 import type { Project } from '@/types/project';
 
-export const projects: Project[] = [
-  {
-    slug: 'minus-zero',
-    title: 'Minus Zero',
-    category: 'Commercial',
-    year: '2025',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/minus-zero/thumbnail.jpg',
-    description:
-      'Minus Zero : A visually striking commercial was crafted for Minus Zero, a contemporary clothing brand, designed to showcase the brand’s bold identity while highlighting our expertise in cinematography, color grading (DI), and visual effects (VFX). Every frame was meticulously composed with stylized lighting and dynamic camera work to capture the essence of modern streetwear. Advanced color grading techniques were applied to enhance mood and tone, while subtle yet impactful VFX added depth and visual sophistication. The result is a sleek, high-end fashion film that merges style, storytelling, and technical precision into one cohesive visual experience.',
-    videoYoutubeId: 'w9VPZLIkx1w',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/minus-zero/1.jpg',
-      'https://cdn.cinedise.studio/public/commercials/minus-zero/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/minus-zero/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/minus-zero/4.jpg',
-    ],
-    nextProject: {
-      slug: 'book-rider',
-      title: 'Book Rider',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/book-rider/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'book-rider',
-    title: 'Book Rider',
-    category: 'Commercial',
-    year: '2025',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/book-rider/thumbnail.jpg',
-    description:
-      'Book Rider : A high-impact commercial was produced for Book Rider, a fast and reliable book delivery service, aimed at capturing the ease and efficiency of the platform. The film features carefully composed visuals, emphasizing natural lighting and smooth camera movement to convey a sense of speed and convenience. Thoughtful cinematography paired with crisp editing brought out the brand’s youthful and dynamic energy. Subtle yet effective color grading was applied to maintain a warm, inviting tone throughout the narrative. The final result is a clean, engaging commercial that highlights functionality with a cinematic touch.',
-    videoYoutubeId: 'gxF3oTy3xGc',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/book-rider/1.jpg',
-      'https://cdn.cinedise.studio/public/commercials/book-rider/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/book-rider/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/book-rider/4.jpg',
-    ],
-    nextProject: {
-      slug: 'atomic-brew',
-      title: 'Atomic Brew',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/atomic-brew/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'atomic-brew',
-    title: 'Atomic Brew',
-    category: 'Commercial',
-    year: '2025',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/atomic-brew/thumbnail.jpg',
-    description:
-      'Atomic Brew is a commercial made for a coffee maker. It shows the power and impact that is similar to the movie - Oppenheimer.',
-    videoYoutubeId: 'Z2FzkLpgNtA',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/atomic-brew/1.jpg',
-      'https://cdn.cinedise.studio/public/commercials/atomic-brew/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/atomic-brew/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/atomic-brew/4.jpg',
-    ],
-    nextProject: {
-      slug: 'atomic-brew-vfx',
-      title: 'Atomic Brew | Breakdown',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/atomic-brew/thumbnail.png',
-    },
-  },
-  {
-    slug: 'atomic-brew-vfx',
-    title: 'Atomic Brew | Breakdown',
-    category: 'VFX',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/atomic-brew/thumbnail.png',
-    description:
-      'A commercial scene was created inspired by the visual style of Oppenheimer, featuring a dramatic nuclear explosion simulation. The effect was achieved using fluid dynamics and particle simulations to replicate the scale, intensity, and cloud formation of a real blast. Careful attention was given to lighting, texture, and compositing to ensure the explosion felt integrated and cinematic. The resulting visual is a high-impact, photorealistic recreation that captures the raw power and atmospheric tension of the original inspiration.',
-    videoEmbedUrl: 'https://cdn.cinedise.studio/public/vfx/atomic-brew.mp4',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/vfx/atomic-brew/1.mp4',
-      'https://cdn.cinedise.studio/public/vfx/atomic-brew/2.mp4',
-    ],
-    nextProject: {
-      slug: 'power-recover',
-      title: 'Power Recover',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/power-recover/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'power-recover',
-    title: 'Power Recover',
-    category: 'Commercial',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/power-recover/thumbnail.jpg',
-    description:
-      'A cutting-edge 3D animation was created for a commercial showcasing a cryotherapy machine and its advanced features. The animation included a fully detailed 3D model of the machine, expertly animated to highlight its functionality and design. Precise color grading was applied to ensure a visually striking look, complemented by sophisticated visual effects (VFX) to elevate the overall production quality. The final result is a polished, professional commercial that seamlessly combines technology, aesthetics, and a dynamic visual experience.',
-    videoYoutubeId: 'pZNbLiPCI2s',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/power-recover/1.jpg',
-      'https://cdn.cinedise.studio/public/commercials/power-recover/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/power-recover/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/power-recover/4.jpg',
-    ],
-    nextProject: {
-      slug: 'power-recover-vfx',
-      title: 'Power Recover | Breakdown',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/power-recover/thumbnail.png',
-    },
-  },
-  {
-    slug: 'power-recover-vfx',
-    title: 'Power Recover | Breakdown',
-    category: 'VFX',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/power-recover/thumbnail.png',
-    description:
-      'A cutting-edge 3D animation was created for a commercial showcasing a cryotherapy machine and its advanced features. The animation included a fully detailed 3D model of the machine, expertly animated to highlight its functionality and design. Precise color grading was applied to ensure a visually striking look, complemented by sophisticated visual effects (VFX) to elevate the overall production quality. The final result is a polished, professional commercial that seamlessly combines technology, aesthetics, and a dynamic visual experience.',
-    videoYoutubeId: 'pZNbLiPCI2s',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/vfx/power-recover/1.png',
-      'https://cdn.cinedise.studio/public/vfx/power-recover/2.png',
-      'https://cdn.cinedise.studio/public/vfx/power-recover/3.png',
-    ],
-    nextProject: {
-      slug: 'layers',
-      title: 'Layers',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/layers/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'layers',
-    title: 'Layers',
-    category: 'Commercial',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/layers/thumbnail.jpg',
-    description:
-      "Layers - An app to get rid of addictions, suicidal thoughts and to improve mental health in general. A solution for Google's solution challenge 2024.",
-    videoYoutubeId: 'TSCGsDKHssU',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/layers/1.jpg',
-      'https://cdn.cinedise.studio/public/commercials/layers/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/layers/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/layers/4.jpg',
-    ],
-    nextProject: {
-      slug: 'qlara',
-      title: 'Qlara',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/qlara/thumbnail.png',
-    },
-  },
-  {
-    slug: 'qlara',
-    title: 'Qlara',
-    category: 'Commercial',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/qlara/thumbnail.png',
-    description:
-      'The green screen footage was meticulously keyed out and animated, ensuring a seamless integration into the scene. Additional lighting was carefully added to match the environment and enhance realism, creating a cohesive visual atmosphere.',
-    videoEmbedUrl: 'https://cdn.cinedise.studio/public/commercials/qlara/7.mp4',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/qlara/1.png',
-      'https://cdn.cinedise.studio/public/commercials/qlara/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/qlara/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/qlara/4.jpg',
-      'https://cdn.cinedise.studio/public/commercials/qlara/5.jpg',
-      'https://cdn.cinedise.studio/public/commercials/qlara/6.mp4',
-      'https://cdn.cinedise.studio/public/commercials/qlara/7.mp4',
-    ],
-    nextProject: {
-      slug: 'qlara-vfx',
-      title: 'Qlara | Breakdown',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/qlara/thumbnail.png',
-    },
-  },
-  {
-    slug: 'qlara-vfx',
-    title: 'Qlara | Breakdown',
-    category: 'VFX',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/qlara/thumbnail.png',
-    description:
-      'The green screen footage was meticulously keyed out and animated, ensuring a seamless integration into the scene. Additional lighting was carefully added to match the environment and enhance realism, creating a cohesive visual atmosphere.',
-    videoEmbedUrl: 'https://cdn.cinedise.studio/public/vfx/qlara/6.mp4',
-    galleryImages: ['https://cdn.cinedise.studio/public/vfx/qlara/1.png'],
-    nextProject: {
-      slug: 'vega-lux',
-      title: 'Vega Lux',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/vega-lux/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'vega-lux',
-    title: 'Vega Lux',
-    category: 'Commercial',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/vega-lux/thumbnail.png',
-    description:
-      'Vegalux set out to revolutionize the market with its latest innovation in laser removal technology. To bring this vision to life, we crafted a high-impact commercial that seamlessly blends cutting-edge visual effects with striking cinematography. Every frame was meticulously designed to showcase the precision, efficiency, and transformative power of this groundbreaking machine. Through advanced VFX techniques, we elevated the visual storytelling, ensuring a dynamic and immersive experience that captivates audiences and reinforces Vegalux’s position at the forefront of technological advancement.',
-    videoYoutubeId: '_PoJSUQhIxY',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/vega-lux/1.png',
-      'https://cdn.cinedise.studio/public/commercials/vega-lux/2.png',
-      'https://cdn.cinedise.studio/public/commercials/vega-lux/3.png',
-      'https://cdn.cinedise.studio/public/commercials/vega-lux/4.png',
-    ],
-    nextProject: {
-      slug: 'vega-lux-vfx',
-      title: 'Vega Lux | Breakdown',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/vega-lux/thumbnail.png',
-    },
-  },
-  {
-    slug: 'vega-lux-vfx',
-    title: 'Vega Lux | Breakdown',
-    category: 'VFX',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/vega-lux/thumbnail.png',
-    description:
-      'Vegalux set out to revolutionize the market with its latest innovation in laser removal technology. To bring this vision to life, we crafted a high-impact commercial that seamlessly blends cutting-edge visual effects with striking cinematography. Every frame was meticulously designed to showcase the precision, efficiency, and transformative power of this groundbreaking machine. Through advanced VFX techniques, we elevated the visual storytelling, ensuring a dynamic and immersive experience that captivates audiences and reinforces Vegalux’s position at the forefront of technological advancement.',
-    videoEmbedUrl: 'https://drive.google.com/file/d/1ecwBteS2eH93-U-ocXvdmlwRfaB6Thqt/preview',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/vfx/vega-lux/1.png',
-      'https://cdn.cinedise.studio/public/vfx/vega-lux/2.png',
-      'https://cdn.cinedise.studio/public/vfx/vega-lux/3.png',
-      'https://cdn.cinedise.studio/public/vfx/vega-lux/4.png',
-    ],
-    nextProject: {
-      slug: 'the-unequals-vfx',
-      title: 'The Unequals',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/the-unequals/thumbnail.png',
-    },
-  },
-  {
-    slug: 'the-unequals-vfx',
-    title: 'The Unequals | Breakdown',
-    category: 'VFX',
-    year: '2025',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/the-unequals/thumbnail.png',
-    description:
-      'This breakdown video provides a detailed showcase of the various VFX elements executed in the film, highlighting each individual component of the visual effects work. From seamless compositing to intricate enhancements, every layer of VFX is carefully deconstructed, demonstrating the technical and creative processes behind the final result. The video offers a comprehensive insight into the integration of digital elements, ensuring a professional and polished visual experience that elevates the storytelling.',
-    videoYoutubeId: '75kvVCRi5PI',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/vfx/the-unequals/breakdown-1.mp4',
-      'https://cdn.cinedise.studio/public/vfx/the-unequals/breakdown-2.mp4',
-      'https://cdn.cinedise.studio/public/vfx/the-unequals/breakdown-3.mp4',
-      'https://cdn.cinedise.studio/public/vfx/the-unequals/2.png',
-      'https://cdn.cinedise.studio/public/vfx/the-unequals/3.png',
-      'https://cdn.cinedise.studio/public/vfx/the-unequals/4.png',
-    ],
-    nextProject: {
-      slug: 'flash-vfx',
-      title: 'Flash',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/flash/thumbnail.png',
-    },
-  },
-  {
-    slug: 'flash-vfx',
-    title: 'Flash | Breakdown',
-    category: 'VFX',
-    year: '2023',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/flash/thumbnail.png',
-    description:
-      'The environment was meticulously created in Blender, providing a realistic and immersive setting for the live-action compositing. Color grading was executed in DaVinci Resolve to achieve a polished, cinematic look. Advanced compositing was performed in After Effects, seamlessly integrating live-action footage with the 3D elements. Detailed painting and enhancements were added through Ebsynth and Photoshop, ensuring a visually rich and dynamic final result. This multi-software approach ensured a cohesive and professional final product that effectively blended live-action and digital elements.',
-    videoEmbedUrl: 'https://drive.google.com/file/d/15Th4AOMdaVZSE1i4C-ITozqSel7DTaH-/preview',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/vfx/flash/1.jpg',
-      'https://cdn.cinedise.studio/public/vfx/flash/3.mp4',
-      'https://cdn.cinedise.studio/public/vfx/flash/2.jpg',
-    ],
-    nextProject: {
-      slug: 'sky-pyramid-vfx',
-      title: 'Sky Pyramid',
-      thumbnail: 'https://cdn.cinedise.studio/public/vfx/sky-pyramid/thumbnail.png',
-    },
-  },
-  {
-    slug: 'sky-pyramid-vfx',
-    title: 'Sky Pyramid | Breakdown',
-    category: 'VFX',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/vfx/sky-pyramid/thumbnail.png',
-    description:
-      "Sky Pyramid is a fusion of fantasy, sci-fi, and futuristic genres. Fueling my passion for pushing creative boundaries, I crafted this environment to unveil a surreal world. It's akin to one's imagination—a dream, a place existing in another realm. I brought it to life using software like Blender and After Effects for compositing.",
-    videoYoutubeId: 'g4qkHfhZyR8',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/vfx/sky-pyramid/1.mp4',
-      'https://cdn.cinedise.studio/public/vfx/sky-pyramid/2.mp4',
-      'https://cdn.cinedise.studio/public/vfx/sky-pyramid/3.png',
-      'https://cdn.cinedise.studio/public/vfx/sky-pyramid/4.mp4',
-    ],
-    nextProject: {
-      slug: 'auto-expo',
-      title: 'Auto Expo',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/auto-expo/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'auto-expo',
-    title: 'Auto Expo',
-    category: 'Commercial',
-    year: '2023',
-    headerImage: 'https://cdn.cinedise.studio/public/commercials/auto-expo/thumbnail.jpg',
-    description: 'A showcase of luxury cars at the Mumbai Auto Expo 2023.',
-    videoYoutubeId: 'lbjanWassIQ',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/commercials/auto-expo/1.jpg',
-      'https://cdn.cinedise.studio/public/commercials/auto-expo/2.jpg',
-      'https://cdn.cinedise.studio/public/commercials/auto-expo/3.jpg',
-      'https://cdn.cinedise.studio/public/commercials/auto-expo/4.jpg',
-    ],
-    nextProject: {
-      slug: 'minus-zero',
-      title: 'Minus Zero',
-      thumbnail: 'https://cdn.cinedise.studio/public/commercials/minus-zero/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'auto-expo-event',
-    title: 'Auto Expo',
-    category: 'Events',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/events/auto-expo/thumbnail.jpg',
-    description:
-      "Where horsepower met heart and design met desire – the Auto Expo at Aminova 2024 was a paradise for speed lovers and machine dreamers. From roaring engines and sleek designs to futuristic concepts and vintage charm, every curve and contour on display turned heads and sparked imaginations. This wasn't just an exhibition – it was a celebration of engineering, innovation, and adrenaline. Relive the drive. Relive the thrill.",
-    videoYoutubeId: 'lbjanWassIQ',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/events/auto-expo/1.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/2.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/3.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/4.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/5.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/6.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/7.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/8.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/9.jpg',
-      'https://cdn.cinedise.studio/public/events/auto-expo/10.jpg',
-    ],
-    nextProject: {
-      slug: 'btfw-25-event',
-      title: 'Bombay Times Fashion Week',
-      thumbnail: 'https://cdn.cinedise.studio/public/events/btfw-25/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'btfw-25-event',
-    title: 'Bombay Times Fashion Week',
-    category: 'Events',
-    year: '2025',
-    headerImage: 'https://cdn.cinedise.studio/public/events/btfw-25/thumbnail.jpg',
-    description:
-      'Highlights from Bombay Times Fashion Week 2025, capturing the glamour, style, and latest trends from the runway.',
-    videoYoutubeId: 'T-L5Z-adthg',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/events/btfw-25/1.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/2.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/3.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/4.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/5.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/6.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/7.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/8.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/9.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/10.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/11.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/12.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/13.jpg',
-      'https://cdn.cinedise.studio/public/events/btfw-25/14.jpg',
-    ],
-    nextProject: {
-      slug: 'aminova-25-event',
-      title: 'Aminova 25',
-      thumbnail: 'https://cdn.cinedise.studio/public/events/aminova-25/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'aminova-25-event',
-    title: 'Aminova 25',
-    category: 'Events',
-    year: '2025',
-    headerImage: 'https://cdn.cinedise.studio/public/events/aminova-25/thumbnail.jpg',
-    description:
-      "Relive the energy, the laughter, and the unforgettable moments that made Aminova 2025 more than just a college fest—it was an experience that brought us all together. From electrifying performances and artistic expressions to wild cheers and late-night memories, every frame of this aftermovie captures the heart of our celebration. Here's to the magic, the madness, and the memories we'll carry forever. This was Aminova.",
-    videoEmbedUrl: 'https://drive.google.com/file/d/1w0-O8fEcOlXBITVwfSM8Ks1j0SHSE8VF/preview',
-    galleryImages: [
-      'https://cdn.cinedise.studio/public/events/aminova-25/1.jpg',
-      'https://cdn.cinedise.studio/public/events/aminova-25/2.jpg',
-      'https://cdn.cinedise.studio/public/events/aminova-25/3.jpg',
-      'https://cdn.cinedise.studio/public/events/aminova-25/4.jpg',
-    ],
-    nextProject: {
-      slug: 'auto-expo-event',
-      title: 'Auto Expo',
-      thumbnail: 'https://cdn.cinedise.studio/public/events/auto-expo/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'wedding-reel',
-    title: 'Wedding Reel',
-    category: 'Social Media',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/social-media/wedding-reel/thumbnail.jpg',
-    description:
-      'A beautiful wedding reel focusing on capturing the special moments and emotions of the day.',
-    videoEmbedUrl: 'https://cdn.cinedise.studio/public/social-media/wedding-reel/1.mp4',
-    galleryImages: [],
-    nextProject: {
-      slug: 'monsoon-in-mumbai',
-      title: 'Monsoon in Mumbai',
-      thumbnail: 'https://cdn.cinedise.studio/public/social-media/monsoon-in-mumbai/thumbnail.jpg',
-    },
-  },
-  {
-    slug: 'monsoon-in-mumbai',
-    title: 'Monsoon in Mumbai',
-    category: 'Social Media',
-    year: '2024',
-    headerImage: 'https://cdn.cinedise.studio/public/social-media/monsoon-in-mumbai/thumbnail.jpg',
-    description: 'Capturing the essence and beauty of Mumbai during the monsoon season.',
-    videoEmbedUrl: 'https://cdn.cinedise.studio/public/social-media/monsoon-in-mumbai/1.mp4',
-    galleryImages: [],
-    nextProject: {
-      slug: 'wedding-reel',
-      title: 'Wedding Reel',
-      thumbnail: 'https://cdn.cinedise.studio/public/social-media/wedding-reel/thumbnail.jpg',
-    },
-  },
-];
+const reader = createReader(process.cwd(), keystaticConfig);
 
-/**
- * Helper functions to decouple routing and UI logic from direct array access
- */
+// Helper to resolve image paths (handles string legacy, string values, and object discriminants)
+function resolveImage(
+  img: string | { discriminant: 'upload' | 'url'; value: string } | null,
+  type: 'header' | 'gallery'
+): string {
+  if (!img) return '';
+  if (typeof img === 'string') {
+    if (img.startsWith('http')) return img;
+    // Legacy migration: assume upload
+    return type === 'header' 
+      ? `/assets/projects/header/${img}` 
+      : `/assets/projects/gallery/${img}`;
+  }
+  const val = img as any;
+  if (val.discriminant === 'url') return val.value || '';
+  if (val.discriminant === 'upload') {
+     if (!val.value) return '';
+     return type === 'header' 
+      ? `/assets/projects/header/${val.value}` 
+      : `/assets/projects/gallery/${val.value}`;
+  }
+  return '';
+}
 
 /**
  * Get a project by its slug
  * @param slug - The project slug to search for
  * @returns The project if found, undefined otherwise
  */
-export function getProjectBySlug(slug: string): Project | undefined {
-  return projects.find((p) => p.slug === slug);
+export async function getProjectBySlug(slug: string): Promise<Project | undefined> {
+  const project = await reader.collections.projects.read(slug);
+  if (!project) return undefined;
+
+  let nextProjectData = undefined;
+  if (project.nextProject) {
+    const nextP = await reader.collections.projects.read(project.nextProject);
+    if (nextP) {
+      nextProjectData = {
+        slug: project.nextProject,
+        title: nextP.title,
+        thumbnail: resolveImage(nextP.headerImage as any, 'header'),
+      };
+    }
+  }
+
+  return {
+    slug,
+    title: project.title,
+    category: project.category as Project['category'],
+    year: project.year,
+    headerImage: resolveImage(project.headerImage as any, 'header'),
+    description: project.description,
+    videoYoutubeId: project.videoYoutubeId || undefined,
+    videoEmbedUrl: project.videoEmbedUrl || undefined,
+    galleryImages: (project.gallery || []).map((img) => resolveImage(img as any, 'gallery')),
+    nextProject: nextProjectData,
+  };
 }
 
 /**
  * Get all project slugs for static generation
  * @returns Array of all project slugs
  */
-export function getAllProjectSlugs(): string[] {
-  return projects.map((p) => p.slug);
+export async function getAllProjectSlugs(): Promise<string[]> {
+  const projects = await reader.collections.projects.list();
+  return projects;
 }
 
 /**
@@ -449,14 +77,32 @@ export function getAllProjectSlugs(): string[] {
  * @param category - The category to filter by
  * @returns Array of projects in the specified category
  */
-export function getProjectsByCategory(category: Project['category']): Project[] {
-  return projects.filter((p) => p.category === category);
+export async function getProjectsByCategory(category: Project['category']): Promise<Project[]> {
+  const allProjects = await reader.collections.projects.all();
+  
+  const filtered = allProjects.filter((entry) => entry.entry.category === category);
+  
+  // Map to Project type (we only need basic info for lists usually, but we'll map fully)
+  return filtered.map((item) => ({
+    slug: item.slug,
+    title: item.entry.title,
+    category: item.entry.category as Project['category'],
+    year: item.entry.year,
+    headerImage: resolveImage(item.entry.headerImage as any, 'header'),
+    description: item.entry.description,
+    videoYoutubeId: item.entry.videoYoutubeId || undefined,
+    videoEmbedUrl: item.entry.videoEmbedUrl || undefined,
+    galleryImages: (item.entry.gallery || []).map((img) => resolveImage(img as any, 'gallery')),
+    nextProject: undefined, // Lists don't usually need nextProject
+  }));
 }
 
 /**
  * Get all unique categories from projects
  * @returns Array of unique category names
  */
-export function getAllCategories(): Project['category'][] {
-  return Array.from(new Set(projects.map((p) => p.category)));
+export async function getAllCategories(): Promise<Project['category'][]> {
+  const allProjects = await reader.collections.projects.all();
+  const categories = new Set(allProjects.map((p) => p.entry.category));
+  return Array.from(categories) as Project['category'][];
 }

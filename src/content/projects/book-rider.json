@@ -1,0 +1,31 @@
+{
+  "title": "Book Rider",
+  "category": "Commercial",
+  "year": "2025",
+  "description": "Book Rider : A high-impact commercial was produced for Book Rider, a fast and reliable book delivery service, aimed at capturing the ease and efficiency of the platform. The film features carefully composed visuals, emphasizing natural lighting and smooth camera movement to convey a sense of speed and convenience. Thoughtful cinematography paired with crisp editing brought out the brand’s youthful and dynamic energy. Subtle yet effective color grading was applied to maintain a warm, inviting tone throughout the narrative. The final result is a clean, engaging commercial that highlights functionality with a cinematic touch.",
+  "videoYoutubeId": "gxF3oTy3xGc",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "book-rider-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "book-rider-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "book-rider-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "book-rider-3.jpg"
+    }
+  ],
+  "nextProject": "atomic-brew",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "book-rider.jpg"
+  }
+}

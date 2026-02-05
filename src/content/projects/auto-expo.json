@@ -1,0 +1,31 @@
+{
+  "title": "Auto Expo",
+  "category": "Commercial",
+  "year": "2023",
+  "description": "A showcase of luxury cars at the Mumbai Auto Expo 2023.",
+  "videoYoutubeId": "lbjanWassIQ",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "auto-expo-3.jpg"
+    }
+  ],
+  "nextProject": "minus-zero",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "auto-expo.jpg"
+  }
+}

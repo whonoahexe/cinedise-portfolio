@@ -1,0 +1,19 @@
+{
+  "title": "Qlara | Breakdown",
+  "category": "VFX",
+  "year": "2024",
+  "description": "The green screen footage was meticulously keyed out and animated, ensuring a seamless integration into the scene. Additional lighting was carefully added to match the environment and enhance realism, creating a cohesive visual atmosphere.",
+  "videoYoutubeId": "",
+  "videoEmbedUrl": "https://cdn.cinedise.studio/public/vfx/qlara/6.mp4",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "qlara-vfx-0.png"
+    }
+  ],
+  "nextProject": "vega-lux",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "qlara-vfx.png"
+  }
+}

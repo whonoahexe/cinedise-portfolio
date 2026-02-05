@@ -1,0 +1,31 @@
+{
+  "title": "Minus Zero",
+  "category": "Commercial",
+  "year": "2025",
+  "description": "Minus Zero : A visually striking commercial was crafted for Minus Zero, a contemporary clothing brand, designed to showcase the brand’s bold identity while highlighting our expertise in cinematography, color grading (DI), and visual effects (VFX). Every frame was meticulously composed with stylized lighting and dynamic camera work to capture the essence of modern streetwear. Advanced color grading techniques were applied to enhance mood and tone, while subtle yet impactful VFX added depth and visual sophistication. The result is a sleek, high-end fashion film that merges style, storytelling, and technical precision into one cohesive visual experience.",
+  "videoYoutubeId": "w9VPZLIkx1w",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "minus-zero-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "minus-zero-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "minus-zero-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "minus-zero-3.jpg"
+    }
+  ],
+  "nextProject": "book-rider",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "minus-zero.jpg"
+  }
+}

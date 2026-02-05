@@ -1,0 +1,27 @@
+{
+  "title": "Flash | Breakdown",
+  "category": "VFX",
+  "year": "2023",
+  "description": "The environment was meticulously created in Blender, providing a realistic and immersive setting for the live-action compositing. Color grading was executed in DaVinci Resolve to achieve a polished, cinematic look. Advanced compositing was performed in After Effects, seamlessly integrating live-action footage with the 3D elements. Detailed painting and enhancements were added through Ebsynth and Photoshop, ensuring a visually rich and dynamic final result. This multi-software approach ensured a cohesive and professional final product that effectively blended live-action and digital elements.",
+  "videoYoutubeId": "",
+  "videoEmbedUrl": "https://drive.google.com/file/d/15Th4AOMdaVZSE1i4C-ITozqSel7DTaH-/preview",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "flash-vfx-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "flash-vfx-1.mp4"
+    },
+    {
+      "discriminant": "upload",
+      "value": "flash-vfx-2.jpg"
+    }
+  ],
+  "nextProject": "sky-pyramid-vfx",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "flash-vfx.png"
+  }
+}

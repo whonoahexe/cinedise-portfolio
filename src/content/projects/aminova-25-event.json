@@ -1,0 +1,31 @@
+{
+  "title": "Aminova 25",
+  "category": "Events",
+  "year": "2025",
+  "description": "Relive the energy, the laughter, and the unforgettable moments that made Aminova 2025 more than just a college fest—it was an experience that brought us all together. From electrifying performances and artistic expressions to wild cheers and late-night memories, every frame of this aftermovie captures the heart of our celebration. Here's to the magic, the madness, and the memories we'll carry forever. This was Aminova.",
+  "videoYoutubeId": "",
+  "videoEmbedUrl": "https://drive.google.com/file/d/1w0-O8fEcOlXBITVwfSM8Ks1j0SHSE8VF/preview",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "aminova-25-event-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "aminova-25-event-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "aminova-25-event-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "aminova-25-event-3.jpg"
+    }
+  ],
+  "nextProject": "auto-expo-event",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "aminova-25-event.jpg"
+  }
+}

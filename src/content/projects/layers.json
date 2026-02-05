@@ -1,0 +1,31 @@
+{
+  "title": "Layers",
+  "category": "Commercial",
+  "year": "2024",
+  "description": "Layers - An app to get rid of addictions, suicidal thoughts and to improve mental health in general. A solution for Google's solution challenge 2024.",
+  "videoYoutubeId": "TSCGsDKHssU",
+  "videoEmbedUrl": "",
+  "gallery": [
+    {
+      "discriminant": "upload",
+      "value": "layers-0.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "layers-1.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "layers-2.jpg"
+    },
+    {
+      "discriminant": "upload",
+      "value": "layers-3.jpg"
+    }
+  ],
+  "nextProject": "qlara",
+  "headerImage": {
+    "discriminant": "upload",
+    "value": "layers.jpg"
+  }
+}
