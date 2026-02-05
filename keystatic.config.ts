@@ -1,18 +1,10 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-  storage:
-    process.env.NODE_ENV === 'production' && process.env.VERCEL === '1'
-      ? {
-          kind: 'github',
-          repo: {
-            owner: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[0] || "whonoahexe",
-            name: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[1] || "cinedise-portfolio",
-          },
-        }
-      : {
-          kind: 'local',
-        },
+  storage: {
+    kind: 'github',
+    repo: 'whonoahexe/cinedise-portfolio'
+  },
   collections: {
     projects: collection({
       label: 'Projects',
