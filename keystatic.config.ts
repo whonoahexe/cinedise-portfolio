@@ -6,8 +6,8 @@ export default config({
       ? {
           kind: 'github',
           repo: {
-            owner: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[0] as string,
-            name: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[1] as string,
+            owner: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[0] || "whonoahexe",
+            name: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[1] || "cinedise-portfolio",
           },
         }
       : {
