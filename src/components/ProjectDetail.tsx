@@ -419,20 +419,22 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         )}
 
         {/* Next Project Section */}
-        <div className="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
-          <div className="tt-section-inner tt-wrap">
-            <div className="tt-page-nav tt-pn-scroll">
-              <Link href={`/${project.nextProject.slug}`} className="tt-pn-link anim-fadeinup">
-                <div className="tt-pn-title">Next Project</div>
-                <div className="tt-pn-hover-title">{project.nextProject.title}</div>
-              </Link>
-              <div className="tt-pn-subtitle anim-fadeinup">Explore More</div>
-              <div className="tt-pn-image">
-                <img src={project.nextProject.thumbnail} alt="image" />
+        {project.nextProject && (
+          <div className="tt-section padding-top-xlg-150 padding-bottom-xlg-150">
+            <div className="tt-section-inner tt-wrap">
+              <div className="tt-page-nav tt-pn-scroll">
+                <Link href={`/${project.nextProject.slug}`} className="tt-pn-link anim-fadeinup">
+                  <div className="tt-pn-title">Next Project</div>
+                  <div className="tt-pn-hover-title">{project.nextProject.title}</div>
+                </Link>
+                <div className="tt-pn-subtitle anim-fadeinup">Explore More</div>
+                <div className="tt-pn-image">
+                  <img src={project.nextProject.thumbnail} alt="image" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </>
   );

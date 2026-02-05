@@ -2,16 +2,16 @@ import { config, fields, collection } from '@keystatic/core';
 
 export default config({
   storage:
-    process.env.NODE_ENV === 'development'
+    process.env.NODE_ENV === 'production' && process.env.VERCEL === '1'
       ? {
-          kind: 'local',
-        }
-      : {
           kind: 'github',
           repo: {
             owner: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[0] as string,
             name: process.env.NEXT_PUBLIC_KEYSTATIC_GITHUB_APP_SLUG?.split('/')[1] as string,
           },
+        }
+      : {
+          kind: 'local',
         },
   collections: {
     projects: collection({
