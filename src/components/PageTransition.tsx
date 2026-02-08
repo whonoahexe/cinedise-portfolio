@@ -44,6 +44,9 @@ export default function PageTransition({ children }: PageTransitionProps) {
       } else {
         window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
       }
+      // Additional mobile scroll reset (fixes mobile browsers)
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     } catch {
       // If anything goes wrong, avoid breaking the transition.
     }
